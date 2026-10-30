@@ -1,7 +1,5 @@
-/* The visual-language library, a section of the home page (index.html, cn/index.html — #languages). Renders whatever
-   /languages/library.json lists — written by the skill's scripts/vl_library_export.py, never by hand — so a new
-   language needs no change here. Ids and classes carry a vl prefix: the deck gallery beside it has its own .grid and
-   .card. The home page owns the language: it calls window.slideMakerLibrary.setLang(lang) on every switch. */
+/* The template library at #languages. Data and media are exported from the main repository's style registry.
+   The home page calls window.slideMakerLibrary.setLang(lang) when its language changes. */
 (function () {
   'use strict';
   var BASE = '/languages/';           // library.json and its media stay where the exporter writes them
@@ -9,39 +7,34 @@
 
   var T = {
     en: {
-      crumb: 'Template library', gallery: 'Deck gallery', searchLabel: 'Search templates',
-      search: 'Search by name or topic', all: 'All', imageLed: 'Image-led', drawn: 'Drawn',
-      headline: function (n) { return [n + ' templates, ', 'each a complete style']; },
+      searchLabel: 'Search templates',
+      search: 'Search by name or topic', all: 'All', imageLed: 'With images', drawn: 'No images needed',
+      headline: function (n) { return 'Choose from ' + n + ' templates'; },
       langLabel: 'Switch the page to Chinese',
-      lede: 'Each template is a complete, checked look for a deck: two designed palettes, a type pairing that ' +
-        'works in Latin and CJK, seven page compositions, and every general component — charts, timelines, tables — ' +
-        'wearing it. Ask for one by name, or let slide-maker offer the ones that fit your topic.',
-      stats: ['templates', 'palettes', 'page types', 'components on every palette'],
+      lede: 'Every template includes two palettes and seven page types, with matching typography and charts. ' +
+        'Preview the pages, choose a palette, then copy the prompt and give slide-maker your material.',
       count: function (n, t) { return n === t ? t + ' templates' : n + ' of ' + t; },
       empty: function (q) { return q ? 'No template matches “' + q + '”.' : 'No template of this kind yet.'; },
       clear: 'Clear filters', copyPrompt: 'Copy prompt', details: 'See all pages', copied: 'Copied',
       copyFailed: 'Copy failed — open the template and select the text',
-      pagesH: 'The seven page types', pagesNote: 'Every template is rendered on the same demo text, with no optional ' +
-        'extras set, so the looks compare on identical words.',
+      pagesH: 'Seven page types', pagesNote: 'These previews use the same text across templates, so you can compare their layouts.',
       notRendered: 'The page renders for this ground are not exported yet; the sample sheets below show the look.',
-      sheetsH: 'Its own sample pages', sheetsNote: 'The template on a topic of its own, as the README shows it.',
+      sheetsH: 'Sample pages in both palettes', sheetsNote: 'See how this template looks with content suited to its style.',
       useH: 'How to use it', prompt: 'Give slide-maker this prompt and your material', ground: 'Palette', close: 'Close', loadFail: 'The library could not be loaded.'
     },
     zh: {
-      crumb: '模板库', gallery: '案例画廊', searchLabel: '搜索模板',
-      search: '按名称或主题搜索', all: '全部', imageLed: '以图为主', drawn: '纯绘制',
-      headline: function (n) { return [n + ' 套模板，', '每套都有完整的画风']; },
+      searchLabel: '搜索模板',
+      search: '搜索模板名称或主题', all: '全部', imageLed: '搭配图片', drawn: '无需配图',
+      headline: function (n) { return n + ' 套模板，选一套开始'; },
       langLabel: '切换为英文页面',
-      lede: '每套模板都有两种配色、适合中西文的字体搭配和七种页面版式，图表、时间线、表格也会使用同一套画风。' +
-        '选好模板，把名称和自己的材料交给 slide-maker 即可；也可以让它按主题推荐。',
-      stats: ['套模板', '种配色', '种页面', '个组件适配每种配色'],
+      lede: '每套都有两种配色、七类页面，以及配套的字体和图表。点开样张看完整页面，选好配色，复制提示词，再带上自己的材料交给 slide-maker。',
       count: function (n, t) { return n === t ? '共 ' + t + ' 套' : n + ' / ' + t + ' 套'; },
       empty: function (q) { return q ? '没有匹配“' + q + '”的模板。' : '这一类暂时还没有。'; },
       clear: '清除筛选', copyPrompt: '复制提示词', details: '看全部页面', copied: '已复制',
       copyFailed: '复制失败，请打开这套模板手动选中文字',
       pagesH: '七种页面', pagesNote: '每套模板使用同一份演示文字，方便在相同内容上比较画风。',
       notRendered: '这种底色的页面渲染还没有导出；下方的样张展示了它的外观。',
-      sheetsH: '它自己的样张', sheetsNote: '这套模板用于相应题材的样子，和 README 里的一致。',
+      sheetsH: '两种配色的样张', sheetsNote: '结合适合这套画风的题材，看看实际排版效果。',
       useH: '怎么用', prompt: '把这句话和你的材料一起交给 slide-maker', ground: '配色', close: '关闭', loadFail: '模板库加载失败。'
     }
   };
@@ -122,17 +115,8 @@
     $('vlQ').placeholder = t('search');
     $('vlClose').setAttribute('aria-label', t('close'));
     if (!lib) return;
-    var hp = t('headline')(lib.stats.languages), hd = $('vlHeadline');
-    hd.textContent = '';
-    hd.appendChild(document.createTextNode(hp[0]));
-    hd.appendChild(el('span', { 'class': 'hl', text: hp[1] }));
+    $('vlHeadline').textContent = t('headline')(lib.stats.languages);
     $('vlLede').textContent = t('lede');
-    var s = lib.stats, labels = t('stats');
-    $('vlStats').innerHTML = '';
-    [s.languages, s.grounds, s.page_types, s.components].forEach(function (n, i) {
-      $('vlStats').appendChild(el('div', { 'class': 'vl-stat' }, [el('div', { 'class': 'n', text: String(n) }),
-        el('div', { 'class': 'l', text: labels[i] })]));
-    });
     var kinds = $('vlKinds');
     kinds.innerHTML = '';
     [['all', t('all')], ['image-led', t('imageLed')], ['drawn', t('drawn')]].forEach(function (k) {
@@ -152,13 +136,6 @@
     return q.split(/\s+/).every(function (w) { return hay.indexOf(w) !== -1; });
   }
 
-  function swatchList(g) {
-    var s = g.swatches;
-    return [s.ground, s.ink].concat(s.accents || []).concat(s.text_accents || []).filter(function (v, i, a) {
-      return v && a.indexOf(v) === i;
-    }).slice(0, 6);
-  }
-
   function card(x) {
     var g = groundOf(x);
     var img = el('img', { src: asset(g.sample), alt: L(x.name) + ' — ' + L(g.label), loading: 'lazy', decoding: 'async',
@@ -176,12 +153,8 @@
       on: { click: function (e) { openDetail(x.id, e.currentTarget); } } })]);
     kids.push(el('div', { 'class': 'vl-cbody' }, [
       el('div', { 'class': 'vl-cname' }, [name]),
-      el('p', { 'class': 'vl-blurb', text: L(x.blurb) }),
       el('div', { 'class': 'vl-tags' }, (x.best_for[state.lang] || []).map(function (tag) {
         return el('button', { type: 'button', text: tag, on: { click: function () { setQuery(tag); } } });
-      })),
-      el('div', { 'class': 'vl-swatches', 'aria-hidden': 'true' }, swatchList(g).map(function (h) {
-        return el('i', { style: 'background:' + hex(h), title: hex(h) });
       })),
       el('div', { 'class': 'vl-cfoot' }, [
         el('button', { 'class': 'btn primary', type: 'button', text: t('copyPrompt'),
