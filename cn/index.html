@@ -194,7 +194,7 @@ footer .sp { flex:1; }
   .bar .hint { display:none; }
 }
 </style>
-<link rel="stylesheet" href="/languages/library.css?v=20261023">
+<link rel="stylesheet" href="/languages/library.css?v=20261030">
 </head>
 <body>
 <header class="hero">
@@ -205,7 +205,7 @@ footer .sp { flex:1; }
       <span class="name">slide-maker</span>
       <span class="by" id="byline"></span>
       <button class="langpill" id="langBtn" aria-label="Switch language"></button>
-      <a class="btn ghost vlib" id="vlBtn" href="#languages"><span class="full">视觉语言库</span><span class="short">语言库</span></a>
+      <a class="btn ghost vlib" id="vlBtn" href="#languages"><span class="full">模板库</span><span class="short">模板库</span></a>
       <a class="btn ghost gh" id="ghBtn" href="https://github.com/addsumtech/slides_maker">GitHub<span class="star">★</span></a>
       <a class="btn primary flip" id="ctaFlip" href="#gallery"></a>
     </div>
@@ -242,7 +242,7 @@ footer .sp { flex:1; }
   <div class="vl-bar" role="search">
     <label class="vl-search">
       <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg>
-      <span class="sr" data-vl-i18n="searchLabel">Search languages</span>
+      <span class="sr" data-vl-i18n="searchLabel">Search templates</span>
       <input id="vlQ" type="search" autocomplete="off" spellcheck="false" placeholder="Search">
     </label>
     <div class="vl-toggle" id="vlKinds" role="group" aria-label="Kind"></div>
@@ -253,14 +253,12 @@ footer .sp { flex:1; }
     <p id="vlEmptyText"></p>
     <button class="btn ghost" id="vlClear" type="button" data-vl-i18n="clear">Clear filters</button>
   </div>
-  <noscript><p class="vl-empty">The visual languages are listed with JavaScript. The same samples are in the
-    <a href="https://github.com/addsumtech/slides_maker#visual-languages">README</a>.</p></noscript>
-  <p class="vl-foot" id="vlFoot"></p>
+  <noscript><p class="vl-empty">The templates are listed with JavaScript. The same samples are in the
+    <a href="https://github.com/addsumtech/slides_maker#template-library">README</a>.</p></noscript>
   <dialog id="vlDetail" aria-labelledby="vlDTitle">
     <div class="vl-dhead">
       <div>
         <h2 id="vlDTitle"></h2>
-        <p class="vl-dmeta" id="vlDMeta"></p>
       </div>
       <button class="vl-close" id="vlClose" type="button" aria-label="Close">×</button>
     </div>
@@ -286,7 +284,7 @@ const STR = {
     byline: 'by <a href="https://addsum.top/?lang=en">Addsum</a>',
     headline: 'Real decks. <span class="hl">Really editable.</span><br>Generated end-to-end by AI agents.',
     lede: 'A skill for Codex and Claude Code that turns papers, code, docs, or just a topic into a natively editable PPTX: real text boxes, native charts, editable math, speaker notes, click builds. Every deck below came out of it. Hover a card to flip through.',
-    vlBtn: 'Visual languages', vlShort: 'Library', ctaFlip: 'Browse the decks', ctaDl: '⬇ Grab the sample deck',
+    vlBtn: 'Template library', vlShort: 'Library', ctaFlip: 'Browse the decks', ctaDl: '⬇ Grab the sample deck',
     ctaNote: 'The sample is the 15-page paper-talk deck. Open it in PowerPoint and click anything: the chart, the math, the speaker notes.',
     st1: 'complete decks', st2: 'languages × styles', st3: 'native editable PPTX', st4: 'free & open source',
     vTitle: 'See it work · 3 min',
@@ -301,7 +299,7 @@ const STR = {
     howCopy: 'Copy',
     howCopied: 'Copied ✓',
     howFoot: 'The path is relative to your cloned repo. slide-maker parses the deck\'s layout and visual system, then rebuilds them around your content.',
-    footText: 'Built with slide-maker in Codex / Claude Code.',
+    footText: 'Produced by Addsum',
     footReadme: 'Quick start',
     title: 'slide-maker — flip through real generated decks',
   },
@@ -309,7 +307,7 @@ const STR = {
     byline: '<a href="https://addsum.top/cn/">增和科技 Addsum</a> 出品',
     headline: '真实的 deck，<span class="hl">真的能编辑</span>。<br>由 AI agent 团队端到端生成。',
     lede: '一个给 Codex 和 Claude Code 用的 skill：把论文、代码、文档，甚至只是一个主题，变成原生可编辑的 PPTX。真文本框、原生图表、可编辑公式、逐页讲稿、点击渐显。下面每一套都是它生成的，悬停封面即可翻页预览。',
-    vlBtn: '视觉语言库', vlShort: '语言库', ctaFlip: '浏览全部 deck', ctaDl: '⬇ 下载样例 .pptx',
+    vlBtn: '模板库', vlShort: '模板库', ctaFlip: '浏览全部 deck', ctaDl: '⬇ 下载样例 .pptx',
     ctaNote: '样例是 15 页的论文精读 deck。在 PowerPoint 里打开随便点：图表、公式、讲稿备注，都是活的。',
     st1: '套完整 deck', st2: '两种语言 × 八种风格', st3: '原生可编辑 PPTX', st4: '免费开源',
     vTitle: '3 分钟，看它怎么干活',
@@ -324,7 +322,7 @@ const STR = {
     howCopy: '复制',
     howCopied: '已复制 ✓',
     howFoot: '路径相对于你 clone 下来的仓库。slide-maker 会解析这套 deck 的版式和视觉系统，围绕你的内容重建。',
-    footText: '由 slide-maker 在 Codex / Claude Code 里生成。',
+    footText: '增和科技 Addsum 出品',
     footReadme: '快速开始',
     title: 'slide-maker — 在线翻阅真实生成的 PPT',
   },
@@ -440,6 +438,6 @@ function setLang(lang) {
   setLang(lang);
 })();
 </script>
-<script src="/languages/library.js?v=20261023"></script>
+<script src="/languages/library.js?v=20261030"></script>
 </body>
 </html>

@@ -4,68 +4,45 @@
    .card. The home page owns the language: it calls window.slideMakerLibrary.setLang(lang) on every switch. */
 (function () {
   'use strict';
-  var REPO = 'https://github.com/addsumtech/slides_maker';
-  var REF = REPO + '/blob/main/skills/slide-maker/references/visual-languages.md';
-  var NEW_DAYS = 30;
   var BASE = '/languages/';           // library.json and its media stay where the exporter writes them
   var HASH = 'vl-';                   // #vl-<id> opens a language (a bare #<id> could be any section of the page)
 
   var T = {
     en: {
-      crumb: 'Visual languages', gallery: 'Deck gallery', searchLabel: 'Search languages',
+      crumb: 'Template library', gallery: 'Deck gallery', searchLabel: 'Search templates',
       search: 'Search by name or topic', all: 'All', imageLed: 'Image-led', drawn: 'Drawn',
-      headline: function (n) { return [n + ' visual languages, ', 'each a whole look']; },
+      headline: function (n) { return [n + ' templates, ', 'each a complete style']; },
       langLabel: 'Switch the page to Chinese',
-      lede: 'A visual language is a complete, checked look for a deck: two designed grounds, a type pairing that ' +
+      lede: 'Each template is a complete, checked look for a deck: two designed palettes, a type pairing that ' +
         'works in Latin and CJK, seven page compositions, and every general component — charts, timelines, tables — ' +
         'wearing it. Ask for one by name, or let slide-maker offer the ones that fit your topic.',
-      stats: ['languages', 'grounds', 'page types', 'components on every ground'],
-      count: function (n, t) { return n === t ? t + ' languages' : n + ' of ' + t; },
-      empty: function (q) { return q ? 'No language matches “' + q + '”.' : 'No language of this kind yet.'; },
+      stats: ['templates', 'palettes', 'page types', 'components on every palette'],
+      count: function (n, t) { return n === t ? t + ' templates' : n + ' of ' + t; },
+      empty: function (q) { return q ? 'No template matches “' + q + '”.' : 'No template of this kind yet.'; },
       clear: 'Clear filters', copyPrompt: 'Copy prompt', details: 'See all pages', copied: 'Copied',
-      copyFailed: 'Copy failed — open the language and select the text',
-      imageLedKind: 'image-led', drawnKind: 'drawn', isNew: 'NEW',
-      pagesH: 'The seven page types', pagesNote: 'Every language is rendered on the same demo text, with no optional ' +
+      copyFailed: 'Copy failed — open the template and select the text',
+      pagesH: 'The seven page types', pagesNote: 'Every template is rendered on the same demo text, with no optional ' +
         'extras set, so the looks compare on identical words.',
       notRendered: 'The page renders for this ground are not exported yet; the sample sheets below show the look.',
-      sheetsH: 'Its own sample pages', sheetsNote: 'The language on a topic of its own, as the README shows it.',
-      paletteH: 'Palette', fontsH: 'Type', extrasH: 'Words only you give', derivedH: 'Words it writes itself',
-      useH: 'How to ask for it', prompt: 'Say to your agent', python: 'Or in a build script',
-      reference: 'The full reference on GitHub', none: 'None.',
-      ground: 'ground', ink: 'ink', mute: 'muted', panel: 'panel', accent: 'accent', textAccent: 'text accent',
-      series: 'chart series', fontsBoth: 'macOS and Windows', fontsMac: 'macOS only', cjk: 'Chinese',
-      display: 'display', body: 'body', numeral: 'numerals', anyPage: 'any page', on: 'on',
-      pictures: 'Takes your picture on', footGen: function (v, d) { return 'Generated from slide-maker ' + v + ' on ' + d + '.'; },
-      footRepo: 'Source and install', footRef: 'Reference', close: 'Close', loadFail: 'The library could not be loaded.',
-      kindLong: { 'image-led': 'built around your pictures', 'drawn': 'drawn, no pictures needed' },
-      addedOn: 'added'
+      sheetsH: 'Its own sample pages', sheetsNote: 'The template on a topic of its own, as the README shows it.',
+      useH: 'How to use it', prompt: 'Give slide-maker this prompt and your material', ground: 'Palette', close: 'Close', loadFail: 'The library could not be loaded.'
     },
     zh: {
-      crumb: '视觉语言', gallery: '案例画廊', searchLabel: '搜索视觉语言',
+      crumb: '模板库', gallery: '案例画廊', searchLabel: '搜索模板',
       search: '按名称或主题搜索', all: '全部', imageLed: '以图为主', drawn: '纯绘制',
-      headline: function (n) { return [n + ' 套视觉语言，', '每套都是完整的外观']; },
+      headline: function (n) { return [n + ' 套模板，', '每套都有完整的画风']; },
       langLabel: '切换为英文页面',
-      lede: '视觉语言是一套完整、经过校验的 PPT 外观：两种设计好的底色、中西文都成立的字体搭配、七种页面构图，' +
-        '图表、时间线、表格等通用组件也都穿上同一身风格。点名就能用，也可以让 slide-maker 按你的主题推荐合适的几套。',
-      stats: ['套视觉语言', '种底色', '种页面', '个组件适配每种底色'],
+      lede: '每套模板都有两种配色、适合中西文的字体搭配和七种页面版式，图表、时间线、表格也会使用同一套画风。' +
+        '选好模板，把名称和自己的材料交给 slide-maker 即可；也可以让它按主题推荐。',
+      stats: ['套模板', '种配色', '种页面', '个组件适配每种配色'],
       count: function (n, t) { return n === t ? '共 ' + t + ' 套' : n + ' / ' + t + ' 套'; },
-      empty: function (q) { return q ? '没有匹配“' + q + '”的视觉语言。' : '这一类暂时还没有。'; },
+      empty: function (q) { return q ? '没有匹配“' + q + '”的模板。' : '这一类暂时还没有。'; },
       clear: '清除筛选', copyPrompt: '复制提示词', details: '看全部页面', copied: '已复制',
-      copyFailed: '复制失败，请打开这套语言手动选中文字',
-      imageLedKind: '以图为主', drawnKind: '纯绘制', isNew: '新',
-      pagesH: '七种页面', pagesNote: '每套语言都用同一份演示文字渲染，可选的附加字段都不填，方便在同样的内容上比较外观。',
+      copyFailed: '复制失败，请打开这套模板手动选中文字',
+      pagesH: '七种页面', pagesNote: '每套模板使用同一份演示文字，方便在相同内容上比较画风。',
       notRendered: '这种底色的页面渲染还没有导出；下方的样张展示了它的外观。',
-      sheetsH: '它自己的样张', sheetsNote: '这套语言在它自己的题材上的样子，和 README 里的一致。',
-      paletteH: '配色', fontsH: '字体', extrasH: '只能由你提供的文字', derivedH: '它自己生成的文字',
-      useH: '怎么用', prompt: '对你的 agent 说', python: '或者在构建脚本里',
-      reference: 'GitHub 上的完整说明', none: '无。',
-      ground: '底色', ink: '正文', mute: '弱化', panel: '面板', accent: '强调', textAccent: '强调文字',
-      series: '图表系列', fontsBoth: 'macOS 和 Windows', fontsMac: '仅 macOS', cjk: '中文',
-      display: '标题', body: '正文', numeral: '数字', anyPage: '任意页面', on: '用于',
-      pictures: '放你的图片的页面', footGen: function (v, d) { return '由 slide-maker ' + v + ' 于 ' + d + ' 生成。'; },
-      footRepo: '源码与安装', footRef: '参考文档', close: '关闭', loadFail: '模版库加载失败。',
-      kindLong: { 'image-led': '围绕你的图片', 'drawn': '纯绘制，无需图片' },
-      addedOn: '加入于'
+      sheetsH: '它自己的样张', sheetsNote: '这套模板用于相应题材的样子，和 README 里的一致。',
+      useH: '怎么用', prompt: '把这句话和你的材料一起交给 slide-maker', ground: '配色', close: '关闭', loadFail: '模板库加载失败。'
     }
   };
 
@@ -87,22 +64,11 @@
   }
   function t(key) { return T[state.lang][key]; }
   function L(obj) { return obj ? (obj[state.lang] || obj.en || '') : ''; }
+  function templatePrompt(g) { return L(g.prompt).replace(/visual language/g, 'template').replace(/视觉语言/g, '模板'); }
   function hex(h) { return '#' + String(h || '').replace(/^#/, ''); }
   function asset(p) { return /^(?:[a-z]+:|\/)/i.test(p || '') ? p : BASE + p; }   // library.json paths are relative to it
 
   function pickLang() { return /^zh\b/i.test(document.documentElement.lang || '') ? 'zh' : 'en'; }   // the home page's
-
-  function pad(n) { return (n < 10 ? '0' : '') + n; }
-  /* NEW = not among the languages the page launched with (library.json baseline_ids), and added within NEW_DAYS.
-     Dates compare as local YYYY-MM-DD strings: parsing them as UTC hid a just-added language for hours east of UTC. */
-  function isNew(x) {
-    var lib = state.lib, ids = lib.baseline_ids;
-    if (!x.added_at) return false;
-    var launched = Array.isArray(ids) ? ids.indexOf(x.id) !== -1 : (!!lib.baseline && x.added_at <= lib.baseline);
-    if (launched) return false;
-    var c = new Date(Date.now() - NEW_DAYS * 864e5);
-    return x.added_at >= c.getFullYear() + '-' + pad(c.getMonth() + 1) + '-' + pad(c.getDate());
-  }
 
   function groundOf(x) {
     var id = state.ground[x.id];
@@ -173,11 +139,6 @@
       kinds.appendChild(el('button', { type: 'button', 'aria-pressed': String(state.kind === k[0]), 'data-kind': k[0],
         text: k[1], on: { click: function () { state.kind = k[0]; writeUrl(); paintChrome(); paintGrid(); } } }));
     });
-    var foot = $('vlFoot');
-    foot.innerHTML = '';
-    foot.appendChild(el('span', { text: t('footGen')(lib.skill_version || '?', lib.generated || '?') }));
-    foot.appendChild(el('a', { href: REPO, text: t('footRepo') }));
-    foot.appendChild(el('a', { href: REF, text: t('footRef') }));
   }
 
   /* ---------- the grid ---------- */
@@ -205,18 +166,16 @@
     var sheet = el('button', { 'class': 'vl-sheet', type: 'button', 'aria-label': t('details') + ': ' + L(x.name),
       on: { click: function () { openDetail(x.id, sheet); } } }, [img]);
     var kids = [sheet];
-    if (isNew(x)) kids.push(el('span', { 'class': 'vl-new', text: t('isNew') }));
-    var kind = el('span', { 'class': 'vl-kind ' + x.kind, text: x.kind === 'image-led' ? t('imageLedKind') : t('drawnKind') });
     kids.push(el('div', { 'class': 'vl-crow' }, [x.grounds.length > 1 ?
       el('div', { 'class': 'vl-grounds', role: 'group', 'aria-label': t('ground') }, x.grounds.map(function (gg) {
         return el('button', { type: 'button', 'aria-pressed': String(gg.id === g.id), 'data-ground': gg.id,
           on: { click: function () { state.ground[x.id] = gg.id; paintGrid(); focusGround(x.id, gg.id); } } },
           [el('i', { style: 'background:' + hex(gg.swatches.ground) }), L(gg.label)]);
-      })) : null, kind]));
+      })) : null]));
     var name = el('h3', null, [el('button', { type: 'button', text: L(x.name),
       on: { click: function (e) { openDetail(x.id, e.currentTarget); } } })]);
     kids.push(el('div', { 'class': 'vl-cbody' }, [
-      el('div', { 'class': 'vl-cname' }, [name, el('code', { text: x.id })]),
+      el('div', { 'class': 'vl-cname' }, [name]),
       el('p', { 'class': 'vl-blurb', text: L(x.blurb) }),
       el('div', { 'class': 'vl-tags' }, (x.best_for[state.lang] || []).map(function (tag) {
         return el('button', { type: 'button', text: tag, on: { click: function () { setQuery(tag); } } });
@@ -226,7 +185,7 @@
       })),
       el('div', { 'class': 'vl-cfoot' }, [
         el('button', { 'class': 'btn primary', type: 'button', text: t('copyPrompt'),
-          on: { click: function (e) { copy(L(g.prompt), e.currentTarget); } } }),
+          on: { click: function (e) { copy(templatePrompt(g), e.currentTarget); } } }),
         el('button', { 'class': 'btn ghost', type: 'button', text: t('details'),
           on: { click: function (e) { openDetail(x.id, e.currentTarget); } } })
       ])
@@ -275,39 +234,8 @@
     showDetail();
   }
 
-  function fontRows(f) {
-    var rows = [];
-    ['display', 'body', 'numeral'].forEach(function (r) {
-      if (f.both && f.both[r]) rows.push([t(r) + ' · ' + t('fontsBoth'), f.both[r]]);
-    });
-    ['display', 'body', 'numeral'].forEach(function (r) {
-      if (f.mac && f.mac[r] && (!f.both || f.mac[r] !== f.both[r])) rows.push([t(r) + ' · ' + t('fontsMac'), f.mac[r]]);
-    });
-    ['display', 'body'].forEach(function (r) {
-      var c = f.cjk && f.cjk[r];
-      if (c) rows.push([t(r) + ' · ' + t('cjk'), c.mac + ' (macOS) · ' + c.win + ' (Windows)']);
-    });
-    return el('table', { 'class': 'vl-kv' }, [el('tbody', null, rows.map(function (r) {
-      return el('tr', null, [el('th', { text: r[0] }), el('td', { text: r[1] })]);
-    }))]);
-  }
-
-  function palette(g) {
-    var s = g.swatches, items = [[t('ground'), s.ground], [t('ink'), s.ink], [t('mute'), s.mute], [t('panel'), s.panel]];
-    (s.accents || []).forEach(function (h) { items.push([t('accent'), h]); });
-    (s.text_accents || []).forEach(function (h) { items.push([t('textAccent'), h]); });
-    var pal = el('div', { 'class': 'vl-pal' }, items.map(function (it) {
-      return el('span', null, [el('i', { style: 'background:' + hex(it[1]) }), it[0], el('code', { text: hex(it[1]) })]);
-    }));
-    var ser = el('div', { 'class': 'vl-pal' }, (s.series || []).map(function (h) {
-      return el('span', null, [el('i', { style: 'background:' + hex(h) }), el('code', { text: hex(h) })]);
-    }));
-    return el('div', { 'class': 'vl-panel' }, [el('h5', { text: L(g.label) }), pal,
-      (s.series || []).length ? el('p', { 'class': 'vl-note', text: t('series') }) : null, ser]);
-  }
-
-  function copyRow(text, isCode) {
-    return el('div', { 'class': 'vl-copyrow' }, [el(isCode ? 'code' : 'span', { text: text }),
+  function copyRow(text) {
+    return el('div', { 'class': 'vl-copyrow' }, [el('span', { text: text }),
       el('button', { 'class': 'btn ghost', type: 'button', text: t('copyPrompt').replace(/ prompt|提示词/, ''),
         on: { click: function (e) { copy(text, e.currentTarget); } } })]);
   }
@@ -315,7 +243,6 @@
   function renderDetail(x) {
     var g = groundOf(x);
     $('vlDTitle').textContent = L(x.name);
-    $('vlDMeta').textContent = x.id + ' · ' + T[state.lang].kindLong[x.kind] + (isNew(x) || (x.added_at && state.lib.baseline && x.added_at > state.lib.baseline) ? ' · ' + t('addedOn') + ' ' + x.added_at : '');
     var body = $('vlDBody');
     body.innerHTML = '';
     body.appendChild(el('p', { 'class': 'vl-blurb', text: L(x.blurb) }));
@@ -344,33 +271,9 @@
         decoding: 'async', width: '1400', height: '800' }), el('figcaption', { text: L(gg.label) })]);
     })));
     body.appendChild(el('p', { 'class': 'vl-note', text: t('sheetsNote') }));
-    body.appendChild(el('h4', { text: t('paletteH') }));
-    body.appendChild(el('div', { 'class': 'vl-facts' }, x.grounds.map(palette)));
-    body.appendChild(el('h4', { text: t('fontsH') }));
-    body.appendChild(el('div', { 'class': 'vl-panel' }, [fontRows(x.fonts)]));
-    var pic = (x.image_pages || []).map(function (id) {
-      for (var i = 0; i < pts.length; i++) if (pts[i].id === id) return L(pts[i].name);
-      return id;
-    });
-    body.appendChild(el('div', { 'class': 'vl-facts', style: 'margin-top:16px' }, [
-      el('div', { 'class': 'vl-panel' }, [el('h5', { text: t('extrasH') }),
-        x.extras && x.extras.length ? el('table', { 'class': 'vl-kv' }, [el('tbody', null, x.extras.map(function (e) {
-          var where = e.pages === 'any' ? t('anyPage') : (e.pages || []).join(', ');
-          return el('tr', null, [el('th', null, [el('code', { text: e.name + '=' })]),
-            el('td', { text: e.takes + ' (' + t('on') + ' ' + where + ')' })]);
-        }))]) : el('p', { 'class': 'vl-note', text: t('none') })]),
-      el('div', { 'class': 'vl-panel' }, [el('h5', { text: t('derivedH') }),
-        x.derived && x.derived.length ? el('table', { 'class': 'vl-kv' }, [el('tbody', null, x.derived.map(function (d) {
-          return el('tr', null, [el('th', null, [el('code', { text: d.id })]), el('td', { text: d.what })]);
-        }))]) : el('p', { 'class': 'vl-note', text: t('none') }),
-        pic.length ? el('p', { 'class': 'vl-note', text: t('pictures') + ': ' + pic.join(', ') }) : null])
-    ]));
     body.appendChild(el('h4', { text: t('useH') }));
     body.appendChild(el('p', { 'class': 'vl-note', text: t('prompt'), style: 'margin:0 0 6px' }));
-    body.appendChild(copyRow(L(g.prompt), false));
-    body.appendChild(el('p', { 'class': 'vl-note', text: t('python'), style: 'margin:4px 0 6px' }));
-    body.appendChild(copyRow('import visual_languages as vl\n' + g.python, true));
-    body.appendChild(el('p', null, [el('a', { href: REF, text: t('reference') + ' →' })]));
+    body.appendChild(copyRow(templatePrompt(g)));
   }
 
   function showDetail() {
