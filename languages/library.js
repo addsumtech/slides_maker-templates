@@ -13,7 +13,7 @@
       headline: function (n) { return 'Choose from ' + n + ' templates'; },
       langLabel: 'Switch the page to Chinese',
       lede: 'Every template includes two palettes and seven page types, with matching typography and charts. ' +
-        'Preview the pages, choose a palette, then copy the prompt and give slide-maker your material.',
+        'Preview the pages, choose a palette, then paste the prompt into your AI assistant with slide-maker installed and provide your material.',
       count: function (n, t) { return n === t ? t + ' templates' : n + ' of ' + t; },
       empty: function (q) { return q ? 'No template matches “' + q + '”.' : 'No template of this kind yet.'; },
       clear: 'Clear filters', copyPrompt: 'Copy prompt', details: 'See all pages', copied: 'Copied',
@@ -21,7 +21,7 @@
       pagesH: 'Seven page types', pagesNote: 'These previews use the same text across templates, so you can compare their layouts.',
       notRendered: 'The page renders for this ground are not exported yet; the sample sheets below show the look.',
       sheetsH: 'Sample pages in both palettes', sheetsNote: 'See how this template looks with content suited to its style.',
-      useH: 'How to use it', prompt: 'Give slide-maker this prompt and your material', ground: 'Palette', close: 'Close',
+      useH: 'How to use it', prompt: 'Paste this prompt into your AI assistant with slide-maker installed, and provide your material.', ground: 'Palette', close: 'Close',
       enlarge: 'Enlarge', original: 'Open original image', loadFail: 'The library could not be loaded.'
     },
     zh: {
@@ -29,7 +29,7 @@
       search: '搜索模板名称或主题', all: '全部', imageLed: '搭配图片', drawn: '无需配图',
       headline: function (n) { return n + ' 套模板，选一套开始'; },
       langLabel: '切换为英文页面',
-      lede: '每套都有两种配色、七类页面，以及配套的字体和图表。点开样张看完整页面，选好配色，复制提示词，再带上自己的材料交给 slide-maker。',
+      lede: '每套都有两种配色、七类页面，以及配套的字体和图表。点开样张看完整页面，选好配色后复制提示词，粘贴到已安装 slide-maker 的 AI 助手中，并提供你的材料。',
       count: function (n, t) { return n === t ? '共 ' + t + ' 套' : n + ' / ' + t + ' 套'; },
       empty: function (q) { return q ? '没有匹配“' + q + '”的模板。' : '这一类暂时还没有。'; },
       clear: '清除筛选', copyPrompt: '复制提示词', details: '看全部页面', copied: '已复制',
@@ -37,7 +37,7 @@
       pagesH: '七种页面', pagesNote: '每套模板使用同一份演示文字，方便在相同内容上比较画风。',
       notRendered: '这种底色的页面渲染还没有导出；下方的样张展示了它的外观。',
       sheetsH: '两种配色的样张', sheetsNote: '结合适合这套画风的题材，看看实际排版效果。',
-      useH: '怎么用', prompt: '把这句话和你的材料一起交给 slide-maker', ground: '配色', close: '关闭',
+      useH: '怎么用', prompt: '将提示词粘贴到已安装 slide-maker 的 AI 助手中，并提供你的材料。', ground: '配色', close: '关闭',
       enlarge: '放大查看', original: '查看原图', loadFail: '模板库加载失败。'
     }
   };
