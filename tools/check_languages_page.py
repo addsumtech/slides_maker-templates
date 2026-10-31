@@ -11,7 +11,9 @@ then drives the page the way a visitor does and reads back what changed:
   - one card per language in library.json, and every image path it names exists on disk;
   - a ground switch swaps the card's sample sheet; search and the kind filter narrow the grid;
   - #vl-ink opens the dialog with one image per page type, and closing it leaves no #vl- hash;
-  - the page's 中文/EN toggle swaps names and blurbs; #vl-nosuch opens nothing;
+  - the page's 中文/EN toggle swaps names; #vl-nosuch opens nothing;
+  - the first four cards show distinct styles; previews enlarge and return keyboard focus;
+  - copied prompts name slide-maker, the template and its selected palette;
   - no horizontal scroll; no console error or uncaught exception (Chrome's own log).
 Exit 1 on any failure, naming it. Needs Chrome or Chromium (CHROME=/path overrides discovery).
 """
@@ -58,12 +60,9 @@ HARNESS = r"""<!doctype html><html><head><meta charset="utf-8"><style>body{margi
     }
     return pending.map(im => im.getAttribute('src'));
   }
-  if (mode === 'new') {       // the NEW fixture: one language outside the launch set, one launch language, both dated today
-    const nw = d.querySelector('#card-%(new)s .vl-new'), sd = d.querySelector('#card-%(same)s .vl-new');
-    if (!nw) fail('a language outside the launch set, added today, wears no NEW badge');
-    if (sd) fail('a language the page launched with wears NEW');
+  if (mode === 'new') {       // dates in the exporter must not reintroduce the removed NEW badges
     const n = d.querySelectorAll('.vl-card .vl-new').length;
-    if (n !== 1) fail(n + ' NEW badges on the fixture (expected exactly 1)');
+    if (n !== 0) fail(n + ' NEW badges on the fixture (expected none)');
     document.getElementById('out').textContent = JSON.stringify(out); return;
   }
   if (mode === 'shot') {      // a screenshot must show decoded pictures, not the frame they will paint into
@@ -79,11 +78,14 @@ HARNESS = r"""<!doctype html><html><head><meta charset="utf-8"><style>body{margi
     if (d.documentElement.scrollWidth > w.innerWidth + 1) fail('horizontal scroll: content ' + d.documentElement.scrollWidth + 'px in ' + w.innerWidth);
     if (cards().length !== lib.languages.length) fail('cards ' + cards().length + ' != languages ' + lib.languages.length);
     const ids = cards().map(c => c.dataset.id);
-    if (JSON.stringify(ids) !== JSON.stringify(lib.languages.map(x => x.id))) fail('cards out of order: ' + ids.join(','));
-    // stats are the exporter's numbers
-    const nums = [...d.querySelectorAll('#languages .vl-stat .n')].map(n => +n.textContent);
-    const s = lib.stats;
-    if (JSON.stringify(nums) !== JSON.stringify([s.languages, s.grounds, s.page_types, s.components])) fail('stats ' + nums);
+    const featured = ['editorial', 'poster', 'ink', 'circuit'].filter(id => lib.languages.some(x => x.id === id));
+    const order = featured.concat(lib.languages.map(x => x.id).filter(id => !featured.includes(id)));
+    if (JSON.stringify(ids) !== JSON.stringify(order)) fail('cards out of order: ' + ids.join(','));
+    if (!d.getElementById('vlHeadline').textContent.includes(String(lib.stats.languages))) fail('library title omits its template count');
+    const columns = w.getComputedStyle(d.getElementById('vlGrid')).gridTemplateColumns.split(' ').length;
+    if (columns !== (%(w)d > 1040 ? 4 : 1)) fail('unexpected column count: ' + columns);
+    if (d.querySelector('#gallery') || d.body.textContent.includes('模板画廊')) fail('the legacy gallery returned');
+    if (!(d.getElementById('intro').compareDocumentPosition(d.getElementById('languages')) & 4)) fail('video is not before templates');
     // ground switch
     const x = lib.languages.find(l => l.grounds.length > 1);
     if (x) {
@@ -135,10 +137,22 @@ HARNESS = r"""<!doctype html><html><head><meta charset="utf-8"><style>body{margi
         const src = (dlg.querySelector('.vl-pages img') || {}).getAttribute ? dlg.querySelector('.vl-pages img').getAttribute('src') : '';
         if (want && src !== '/languages/' + ink.grounds[1].pages.cover) fail('the dialog ground switch left the cover at ' + src); }
       if (dlg.scrollWidth > dlg.clientWidth + 1) fail('the dialog scrolls sideways (' + dlg.scrollWidth + ' > ' + dlg.clientWidth + ')');
-      const code = dlg.querySelector('.vl-copyrow code');
-      if (!code) fail('the dialog has no python usage line');
-      else if (code.textContent.includes('\n') && !/^(pre|pre-wrap|pre-line|break-spaces)$/.test(w.getComputedStyle(code).whiteSpace))
-        fail('the python usage shows its lines run together (white-space: ' + w.getComputedStyle(code).whiteSpace + ')');
+      const prompt = dlg.querySelector('.vl-copyrow span');
+      if (!prompt || !prompt.textContent.includes('slide-maker') || !prompt.textContent.includes('ink')) fail('the prompt does not identify the skill and template');
+      const palette = ink.grounds[gb ? 1 : 0].label;
+      if (prompt && !prompt.textContent.includes(palette.en) && !prompt.textContent.includes(palette.zh)) fail('prompt omits the selected palette');
+      if (w.getComputedStyle(dlg.querySelector('.vl-copyrow')).alignItems !== 'center') fail('prompt is not vertically centered');
+      const preview = dlg.querySelector('.vl-pages .vl-preview');
+      preview.click(); await sleep(80);
+      const zoom = d.getElementById('vlZoom');
+      if (!zoom.open) fail('clicking a page did not enlarge it');
+      if (d.getElementById('vlZoomImage').src !== preview.querySelector('img').src) fail('the enlarged image is not the selected page');
+      if (d.getElementById('vlOriginal').href !== preview.querySelector('img').src) fail('original-image link is not the selected page');
+      if (zoom.scrollWidth > zoom.clientWidth + 1) fail('image viewer scrolls sideways');
+      d.getElementById('vlZoomClose').click(); await sleep(80);
+      if (zoom.open || !dlg.open || d.activeElement !== preview) fail('closing the image viewer did not return focus to its preview: zoom=' + zoom.open + ', detail=' + dlg.open + ', focus=' + d.activeElement.outerHTML.slice(0, 160));
+      preview.click(); await sleep(50); zoom.dispatchEvent(new Event('cancel', {cancelable:true})); await sleep(80);
+      if (zoom.open || !dlg.open) fail('Escape from the image viewer closed the template too');
       d.getElementById('vlClose').click(); await sleep(80);
       if (dlg.open) fail('the close button left the dialog open');
       if (/^#vl-/.test(w.location.hash)) fail('closing left the hash ' + w.location.hash);
@@ -152,14 +166,12 @@ HARNESS = r"""<!doctype html><html><head><meta charset="utf-8"><style>body{margi
     }
     w.location.hash = ''; await sleep(50);
     // 中文
-    const first = lib.languages[0];
+    const first = lib.languages.find(x => x.id === order[0]);
     const before = d.querySelector('.vl-card h3').textContent;
     d.getElementById('langBtn').click(); await sleep(80);
     const now = d.querySelector('.vl-card h3').textContent;
     const other = before === first.name.en ? first.name.zh : first.name.en;
     if (now !== other) fail('the language toggle left the first name at "' + now + '" (expected "' + other + '")');
-    const blurb = d.querySelector('.vl-card .vl-blurb').textContent;
-    if (blurb !== first.blurb.en && blurb !== first.blurb.zh) fail('the first blurb is not the manifest\'s');
     if (d.documentElement.scrollWidth > w.innerWidth + 1) fail('horizontal scroll after the toggle: ' + d.documentElement.scrollWidth);
     d.getElementById('langBtn').click(); await sleep(50);
     // the language button's label follows the page's language
@@ -182,8 +194,10 @@ HARNESS = r"""<!doctype html><html><head><meta charset="utf-8"><style>body{margi
     const setClip = (fn) => Object.defineProperty(w.navigator, 'clipboard', {value: {writeText: fn}, configurable: true});
     const copiedWord = d.documentElement.lang.startsWith('zh') ? '已复制' : 'Copied';
     async function announced(ms) { for (let i = 0; i < ms; i += 50) { if (live && live.textContent.trim()) return true; await sleep(50); } return false; }
-    setClip(() => Promise.resolve()); live.textContent = ''; copyBtn.click();
+    let copiedText = '';
+    setClip(text => { copiedText = text; return Promise.resolve(); }); live.textContent = ''; copyBtn.click();
     if (!(await announced(400)) || !live.textContent.includes(copiedWord)) fail('a successful copy is not announced as copied ("' + live.textContent + '")');
+    if (!copiedText.includes('slide-maker') || !copiedText.includes(first.id)) fail('clipboard lacks a self-contained template prompt');
     await sleep(1500);
     const exec0 = d.execCommand;
     setClip(() => new Promise(() => {})); d.execCommand = () => true; live.textContent = ''; copyBtn.click();
@@ -274,8 +288,7 @@ def console_errors(stderr):
 
 
 def new_badge_run(binary, lib, prof):
-    """NEW on a fixture library: the last language is outside the launch set and the first is inside it, both dated
-    today (the launch day) — exactly one badge, on the last. The real library.json cannot show this on launch day."""
+    """Even a newly dated style must not reintroduce the removed NEW badges."""
     import datetime
     ids = [x["id"] for x in lib.get("languages", [])]
     if len(ids) < 2:

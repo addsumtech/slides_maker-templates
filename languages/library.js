@@ -4,6 +4,7 @@
   'use strict';
   var BASE = '/languages/';           // library.json and its media stay where the exporter writes them
   var HASH = 'vl-';                   // #vl-<id> opens a language (a bare #<id> could be any section of the page)
+  var FEATURED = ['editorial', 'poster', 'ink', 'circuit'];
 
   var T = {
     en: {
@@ -20,7 +21,8 @@
       pagesH: 'Seven page types', pagesNote: 'These previews use the same text across templates, so you can compare their layouts.',
       notRendered: 'The page renders for this ground are not exported yet; the sample sheets below show the look.',
       sheetsH: 'Sample pages in both palettes', sheetsNote: 'See how this template looks with content suited to its style.',
-      useH: 'How to use it', prompt: 'Give slide-maker this prompt and your material', ground: 'Palette', close: 'Close', loadFail: 'The library could not be loaded.'
+      useH: 'How to use it', prompt: 'Give slide-maker this prompt and your material', ground: 'Palette', close: 'Close',
+      enlarge: 'Enlarge', original: 'Open original image', loadFail: 'The library could not be loaded.'
     },
     zh: {
       searchLabel: '搜索模板',
@@ -35,11 +37,12 @@
       pagesH: '七种页面', pagesNote: '每套模板使用同一份演示文字，方便在相同内容上比较画风。',
       notRendered: '这种底色的页面渲染还没有导出；下方的样张展示了它的外观。',
       sheetsH: '两种配色的样张', sheetsNote: '结合适合这套画风的题材，看看实际排版效果。',
-      useH: '怎么用', prompt: '把这句话和你的材料一起交给 slide-maker', ground: '配色', close: '关闭', loadFail: '模板库加载失败。'
+      useH: '怎么用', prompt: '把这句话和你的材料一起交给 slide-maker', ground: '配色', close: '关闭',
+      enlarge: '放大查看', original: '查看原图', loadFail: '模板库加载失败。'
     }
   };
 
-  var state = { lang: 'en', q: '', kind: 'all', ground: {}, lib: null, opener: null, pushed: false };
+  var state = { lang: 'en', q: '', kind: 'all', ground: {}, lib: null, opener: null, zoomOpener: null, pushed: false };
   var $ = function (id) { return document.getElementById(id); };
 
   function el(tag, attrs, kids) {
@@ -114,6 +117,8 @@
     document.querySelectorAll('#languages [data-vl-i18n]').forEach(function (n) { n.textContent = t(n.getAttribute('data-vl-i18n')); });
     $('vlQ').placeholder = t('search');
     $('vlClose').setAttribute('aria-label', t('close'));
+    $('vlZoomClose').setAttribute('aria-label', t('close'));
+    $('vlOriginal').textContent = t('original');
     if (!lib) return;
     $('vlHeadline').textContent = t('headline')(lib.stats.languages);
     $('vlLede').textContent = t('lede');
@@ -175,6 +180,10 @@
     var lib = state.lib, grid = $('vlGrid');
     grid.innerHTML = '';
     var shown = lib.languages.filter(matches);
+    shown.sort(function (a, b) {
+      var ai = FEATURED.indexOf(a.id), bi = FEATURED.indexOf(b.id);
+      return (ai < 0 ? FEATURED.length : ai) - (bi < 0 ? FEATURED.length : bi);
+    });
     shown.forEach(function (x) { grid.appendChild(card(x)); });
     $('vlCount').textContent = t('count')(shown.length, lib.languages.length);
     $('vlEmpty').hidden = shown.length > 0;
@@ -213,6 +222,37 @@
         on: { click: function (e) { copy(text, e.currentTarget); } } })]);
   }
 
+  function preview(src, label, width, height) {
+    var button = el('button', { 'class': 'vl-preview', type: 'button', 'aria-label': t('enlarge') + ': ' + label,
+      on: { click: function () { openZoom(src, label, button); } } }, [
+      el('img', { src: src, alt: label, loading: 'lazy', decoding: 'async', width: width, height: height })
+    ]);
+    return button;
+  }
+
+  function openZoom(src, label, opener) {
+    state.zoomOpener = opener;
+    $('vlZoomTitle').textContent = label;
+    $('vlZoomImage').src = src;
+    $('vlZoomImage').alt = label;
+    $('vlOriginal').href = src;
+    $('vlZoom').showModal();
+    $('vlZoomClose').focus();
+  }
+
+  function closeZoom() {
+    if ($('vlZoom').open) {
+      $('vlZoom').close();
+      restoreZoomFocus();
+    }
+  }
+
+  function restoreZoomFocus() {
+    var opener = state.zoomOpener;
+    state.zoomOpener = null;
+    if (opener && document.contains(opener) && $('vlDetail').open) opener.focus();
+  }
+
   function renderDetail(x) {
     var g = groundOf(x);
     $('vlDTitle').textContent = L(x.name);
@@ -233,15 +273,15 @@
     var have = pts.filter(function (p) { return g.pages && g.pages[p.id]; });
     if (have.length) {
       body.appendChild(el('div', { 'class': 'vl-pages' }, have.map(function (p) {
-        return el('figure', null, [el('img', { src: asset(g.pages[p.id]), alt: L(x.name) + ' — ' + L(p.name) + ' — ' + L(g.label),
-          loading: 'lazy', decoding: 'async', width: '960', height: '540' }), el('figcaption', { text: L(p.name) })]);
+        return el('figure', null, [preview(asset(g.pages[p.id]), L(x.name) + ' ' + L(p.name) + ' ' + L(g.label), '960', '540'),
+          el('figcaption', { text: L(p.name) })]);
       })));
       body.appendChild(el('p', { 'class': 'vl-note', text: t('pagesNote') }));
     } else body.appendChild(el('p', { 'class': 'vl-note', text: t('notRendered') }));
     body.appendChild(el('h4', { text: t('sheetsH') }));
     body.appendChild(el('div', { 'class': 'vl-sheets' }, x.grounds.map(function (gg) {
-      return el('figure', null, [el('img', { src: asset(gg.sample), alt: L(x.name) + ' — ' + L(gg.label), loading: 'lazy',
-        decoding: 'async', width: '1400', height: '800' }), el('figcaption', { text: L(gg.label) })]);
+      return el('figure', null, [preview(asset(gg.sample), L(x.name) + ' ' + L(gg.label), '1400', '800'),
+        el('figcaption', { text: L(gg.label) })]);
     })));
     body.appendChild(el('p', { 'class': 'vl-note', text: t('sheetsNote') }));
     body.appendChild(el('h4', { text: t('useH') }));
@@ -250,6 +290,7 @@
   }
 
   function showDetail() {
+    closeZoom();
     var d = $('vlDetail');
     var raw = location.hash.replace(/^#/, ''), id = '';
     if (raw.indexOf(HASH) === 0) {
@@ -267,6 +308,7 @@
   }
 
   function closeDetail() {
+    closeZoom();
     var d = $('vlDetail');
     if (state.pushed && location.hash) {   // we added the #vl-id entry: step back over it (popstate closes the dialog)
       state.pushed = false;
@@ -288,6 +330,11 @@
     });
     $('vlClear').addEventListener('click', function () { state.q = ''; state.kind = 'all'; writeUrl(); paintChrome(); paintGrid(); });
     $('vlClose').addEventListener('click', closeDetail);
+    $('vlZoomClose').addEventListener('click', closeZoom);
+    var zoom = $('vlZoom');
+    zoom.addEventListener('cancel', function (e) { e.preventDefault(); closeZoom(); });
+    zoom.addEventListener('click', function (e) { if (e.target === zoom) closeZoom(); });
+    zoom.addEventListener('close', restoreZoomFocus);
     var d = $('vlDetail');
     d.addEventListener('cancel', function (e) { e.preventDefault(); closeDetail(); });
     d.addEventListener('click', function (e) { if (e.target === d) closeDetail(); });   // the backdrop

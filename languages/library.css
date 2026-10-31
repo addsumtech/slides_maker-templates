@@ -81,6 +81,19 @@
 #languages .vl-pages img, #languages .vl-sheets img { width:100%; height:auto; display:block; border-radius:6px; border:1px solid var(--line); background:#e7e9ed; }
 #languages .vl-pages img { aspect-ratio:16/9; }
 #languages .vl-sheets img { aspect-ratio:7/4; }
+#languages .vl-preview { display:block; width:100%; padding:0; border:0; background:transparent; cursor:zoom-in; }
+#languages .vl-preview:focus-visible { outline:2px solid var(--accent); outline-offset:3px; border-radius:6px; }
+#languages .vl-zoom { width:min(1440px, calc(100vw - 32px)); background:var(--card); }
+#languages .vl-zoom .vl-dhead { align-items:center; }
+#languages .vl-zoom .vl-dhead h2 { font-size:18px; font-weight:650; }
+#languages .vl-original { margin-left:auto; font-size:13px; color:var(--mute); white-space:nowrap; text-underline-offset:3px; }
+#languages .vl-zoom .vl-close { margin-left:0; }
+#languages .vl-zoom-image { display:block; width:100%; height:auto; }
+@media (max-width:640px) {
+  #languages .vl-zoom { width:100vw; height:fit-content; max-height:100dvh; margin:auto 0; }
+  #languages .vl-zoom .vl-dhead { padding:12px; gap:10px; }
+  #languages .vl-zoom .vl-dhead h2 { font-size:16px; }
+}
 #languages figcaption { font-size:12.5px; color:var(--mute); margin-top:6px; }
 #languages .vl-sheets { display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap:16px; }
 #languages .vl-copyrow { display:flex; gap:10px; align-items:center; background:var(--card); border:1px solid var(--line);

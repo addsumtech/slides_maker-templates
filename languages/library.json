@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-10-23",
+ "generated": "2026-10-31",
  "baseline": "2026-10-17",
  "baseline_ids": [
   "editorial",
@@ -140,8 +140,8 @@
      "render_fp": "178c149712d3df06c40bee5cecc4337d2a692b51adad98ca7d9ad84da53bfbf7",
      "python": "k = vl.use(\"editorial\", prs)",
      "prompt": {
-      "en": "Use the editorial (Editorial magazine) visual language for this deck.",
-      "zh": "用 editorial（杂志）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Editorial magazine (editorial) template and its paper palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用杂志（editorial）模板的纸面版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -184,8 +184,8 @@
      "render_fp": "9961986675a78aa0d7c073bc6145a809612330b7e0c88ced194af358a03e7d4b",
      "python": "k = vl.use(\"editorial\", prs, ground=\"ink\")",
      "prompt": {
-      "en": "Use the editorial (Editorial magazine) visual language, on its ink ground, for this deck.",
-      "zh": "用 editorial（杂志）视觉语言的墨黑版做这份 PPT。"
+      "en": "Use slide-maker with the Editorial magazine (editorial) template and its ink palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用杂志（editorial）模板的墨黑版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -231,8 +231,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the editorial (Editorial magazine) visual language for this deck.",
-     "zh": "用 editorial（杂志）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Editorial magazine (editorial) template and its paper palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用杂志（editorial）模板的纸面版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"editorial\", prs)"
    }
@@ -301,8 +301,8 @@
      "render_fp": "dbea3b66ebd948886fea48cb4b5ffd59dc0140c4fc81ad6a410f043752af1024",
      "python": "k = vl.use(\"soft\", prs)",
      "prompt": {
-      "en": "Use the soft (Soft organic) visual language for this deck.",
-      "zh": "用 soft（柔和）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Soft organic (soft) template and its cream palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用柔和（soft）模板的奶油版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -347,8 +347,8 @@
      "render_fp": "a21a516908ca2c6238121b759d045f1e31213e70ae6bc196203f3c1606d73697",
      "python": "k = vl.use(\"soft\", prs, ground=\"dusk\")",
      "prompt": {
-      "en": "Use the soft (Soft organic) visual language, on its dusk ground, for this deck.",
-      "zh": "用 soft（柔和）视觉语言的暮色版做这份 PPT。"
+      "en": "Use slide-maker with the Soft organic (soft) template and its dusk palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用柔和（soft）模板的暮色版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -394,8 +394,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the soft (Soft organic) visual language for this deck.",
-     "zh": "用 soft（柔和）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Soft organic (soft) template and its cream palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用柔和（soft）模板的奶油版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"soft\", prs)"
    }
@@ -464,8 +464,8 @@
      "render_fp": "019e5fbce6ffc9e1c61259bb72b8a81cc780be3e2989e18f5ea9f8c97f6a279f",
      "python": "k = vl.use(\"collage\", prs)",
      "prompt": {
-      "en": "Use the collage (Collage scrapbook) visual language for this deck.",
-      "zh": "用 collage（拼贴）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Collage scrapbook (collage) template and its kraft palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用拼贴（collage）模板的牛皮纸版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -510,8 +510,8 @@
      "render_fp": "eb0159dfe326bfd4cf0dac49c4fc39e8a91d32fd255d4a889b7a25ac59812ff5",
      "python": "k = vl.use(\"collage\", prs, ground=\"slate\")",
      "prompt": {
-      "en": "Use the collage (Collage scrapbook) visual language, on its slate ground, for this deck.",
-      "zh": "用 collage（拼贴）视觉语言的深灰纸版做这份 PPT。"
+      "en": "Use slide-maker with the Collage scrapbook (collage) template and its slate palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用拼贴（collage）模板的深灰纸版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -558,8 +558,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the collage (Collage scrapbook) visual language for this deck.",
-     "zh": "用 collage（拼贴）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Collage scrapbook (collage) template and its kraft palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用拼贴（collage）模板的牛皮纸版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"collage\", prs)"
    }
@@ -628,8 +628,8 @@
      "render_fp": "055ad9b1cb3748de1fd6f79bfd4da770cedbb5eb3534c9102e88b74119221e9c",
      "python": "k = vl.use(\"storybook\", prs)",
      "prompt": {
-      "en": "Use the storybook (Watercolour storybook) visual language for this deck.",
-      "zh": "用 storybook（绘本）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Watercolour storybook (storybook) template and its paper palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用绘本（storybook）模板的纸面版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -674,8 +674,8 @@
      "render_fp": "ff02b084cc8b8107211d8245f69adf31073915361ed876abdbb960066faf2bca",
      "python": "k = vl.use(\"storybook\", prs, ground=\"meadow\")",
      "prompt": {
-      "en": "Use the storybook (Watercolour storybook) visual language, on its meadow ground, for this deck.",
-      "zh": "用 storybook（绘本）视觉语言的草地纸版做这份 PPT。"
+      "en": "Use slide-maker with the Watercolour storybook (storybook) template and its meadow palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用绘本（storybook）模板的草地纸版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -721,8 +721,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the storybook (Watercolour storybook) visual language for this deck.",
-     "zh": "用 storybook（绘本）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Watercolour storybook (storybook) template and its paper palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用绘本（storybook）模板的纸面版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"storybook\", prs)"
    }
@@ -791,8 +791,8 @@
      "render_fp": "6884ac041f21d62c361e72b52fcf45ad97c3ef4d17e909aea6e16014354f05fd",
      "python": "k = vl.use(\"ink\", prs)",
      "prompt": {
-      "en": "Use the ink (Ink wash) visual language for this deck.",
-      "zh": "用 ink（水墨）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Ink wash (ink) template and its xuan paper palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用水墨（ink）模板的宣纸版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -833,8 +833,8 @@
      "render_fp": "fe458ff8082a9cf8803cfe977d5d51dd2ee7872512bb82ebc150c65af062ce47",
      "python": "k = vl.use(\"ink\", prs, ground=\"night\")",
      "prompt": {
-      "en": "Use the ink (Ink wash) visual language, on its ink night ground, for this deck.",
-      "zh": "用 ink（水墨）视觉语言的墨夜版做这份 PPT。"
+      "en": "Use slide-maker with the Ink wash (ink) template and its ink night palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用水墨（ink）模板的墨夜版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -880,8 +880,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the ink (Ink wash) visual language for this deck.",
-     "zh": "用 ink（水墨）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Ink wash (ink) template and its xuan paper palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用水墨（ink）模板的宣纸版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"ink\", prs)"
    }
@@ -953,8 +953,8 @@
      "render_fp": "09ec38f0ae7c44da309ffcf939cd0dbd58e102acc06c7bc308f090cb2e0b546e",
      "python": "k = vl.use(\"poster\", prs)",
      "prompt": {
-      "en": "Use the poster (Type poster) visual language for this deck.",
-      "zh": "用 poster（海报大字）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Type poster (poster) template and its colour fields palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用海报大字（poster）模板的色场版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -997,8 +997,8 @@
      "render_fp": "91d2c1cd7f6c2ce27d48a436d30abc7f304ca0c6e69ae3d2129896bb121be771",
      "python": "k = vl.use(\"poster\", prs, ground=\"paper\")",
      "prompt": {
-      "en": "Use the poster (Type poster) visual language, on its paper ground, for this deck.",
-      "zh": "用 poster（海报大字）视觉语言的白纸版做这份 PPT。"
+      "en": "Use slide-maker with the Type poster (poster) template and its paper palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用海报大字（poster）模板的白纸版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -1055,8 +1055,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the poster (Type poster) visual language for this deck.",
-     "zh": "用 poster（海报大字）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Type poster (poster) template and its colour fields palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用海报大字（poster）模板的色场版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"poster\", prs)"
    }
@@ -1129,8 +1129,8 @@
      "render_fp": "e4bcddc68558d3ce0dd7a8cd370522060a7993e723d78565bb2a8c7174930cbd",
      "python": "k = vl.use(\"cutpaper\", prs)",
      "prompt": {
-      "en": "Use the cutpaper (Cut paper) visual language for this deck.",
-      "zh": "用 cutpaper（剪纸层叠）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Cut paper (cutpaper) template and its day palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用剪纸层叠（cutpaper）模板的白天版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -1175,8 +1175,8 @@
      "render_fp": "41df8abb40eb272627f96cd57980409e2adcb4968605727b07672be56a1889db",
      "python": "k = vl.use(\"cutpaper\", prs, ground=\"night\")",
      "prompt": {
-      "en": "Use the cutpaper (Cut paper) visual language, on its paper night ground, for this deck.",
-      "zh": "用 cutpaper（剪纸层叠）视觉语言的纸夜版做这份 PPT。"
+      "en": "Use slide-maker with the Cut paper (cutpaper) template and its paper night palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用剪纸层叠（cutpaper）模板的纸夜版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -1224,8 +1224,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the cutpaper (Cut paper) visual language for this deck.",
-     "zh": "用 cutpaper（剪纸层叠）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Cut paper (cutpaper) template and its day palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用剪纸层叠（cutpaper）模板的白天版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"cutpaper\", prs)"
    }
@@ -1294,8 +1294,8 @@
      "render_fp": "3075660d254bec4713aba12141c3d026bdd720279472bead693061a4eaa5b067",
      "python": "k = vl.use(\"drafting\", prs)",
      "prompt": {
-      "en": "Use the drafting (Drafting sheet) visual language for this deck.",
-      "zh": "用 drafting（蓝图技术线稿）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Drafting sheet (drafting) template and its vellum palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用蓝图技术线稿（drafting）模板的硫酸纸版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -1336,8 +1336,8 @@
      "render_fp": "2b79d07feec53aa3676644f2347bf5c33b2477120f92ee797538d12db27eb99d",
      "python": "k = vl.use(\"drafting\", prs, ground=\"cyanotype\")",
      "prompt": {
-      "en": "Use the drafting (Drafting sheet) visual language, on its cyanotype ground, for this deck.",
-      "zh": "用 drafting（蓝图技术线稿）视觉语言的晒图蓝版做这份 PPT。"
+      "en": "Use slide-maker with the Drafting sheet (drafting) template and its cyanotype palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用蓝图技术线稿（drafting）模板的晒图蓝版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -1390,8 +1390,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the drafting (Drafting sheet) visual language for this deck.",
-     "zh": "用 drafting（蓝图技术线稿）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Drafting sheet (drafting) template and its vellum palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用蓝图技术线稿（drafting）模板的硫酸纸版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"drafting\", prs)"
    }
@@ -1462,8 +1462,8 @@
      "render_fp": "5541114c952aefaa2101da33a484725fa35899ffad6e78fdb38a263d708b8ef7",
      "python": "k = vl.use(\"starlit\", prs)",
      "prompt": {
-      "en": "Use the starlit (Starlit night) visual language for this deck.",
-      "zh": "用 starlit（星夜）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Starlit night (starlit) template and its midnight palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用星夜（starlit）模板的午夜版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -1504,8 +1504,8 @@
      "render_fp": "3d2954a30cc0870a1dac0f8499c61e6b9fffce9ad9bff07fbe32de3fa8da9dec",
      "python": "k = vl.use(\"starlit\", prs, ground=\"dawn\")",
      "prompt": {
-      "en": "Use the starlit (Starlit night) visual language, on its dawn ground, for this deck.",
-      "zh": "用 starlit（星夜）视觉语言的黎明版做这份 PPT。"
+      "en": "Use slide-maker with the Starlit night (starlit) template and its dawn palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用星夜（starlit）模板的黎明版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -1540,8 +1540,8 @@
    "derived": [],
    "usage": {
     "prompt": {
-     "en": "Use the starlit (Starlit night) visual language for this deck.",
-     "zh": "用 starlit（星夜）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Starlit night (starlit) template and its midnight palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用星夜（starlit）模板的午夜版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"starlit\", prs)"
    }
@@ -1610,8 +1610,8 @@
      "render_fp": "a48b26a0232f2b42dcc983a367d88cfc5dc9641497d9e29ad8161af54581d21b",
      "python": "k = vl.use(\"broadsheet\", prs)",
      "prompt": {
-      "en": "Use the broadsheet (Broadsheet front page) visual language for this deck.",
-      "zh": "用 broadsheet（报纸头版）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Broadsheet front page (broadsheet) template and its newsprint palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用报纸头版（broadsheet）模板的报纸版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -1652,8 +1652,8 @@
      "render_fp": "6bb168135d97f47fe0cce03455bdb29d0c014a32d25b1bb30be7ea4c1d996fe6",
      "python": "k = vl.use(\"broadsheet\", prs, ground=\"salmon\")",
      "prompt": {
-      "en": "Use the broadsheet (Broadsheet front page) visual language, on its pink paper ground, for this deck.",
-      "zh": "用 broadsheet（报纸头版）视觉语言的粉报版做这份 PPT。"
+      "en": "Use slide-maker with the Broadsheet front page (broadsheet) template and its pink paper palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用报纸头版（broadsheet）模板的粉报版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -1728,8 +1728,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the broadsheet (Broadsheet front page) visual language for this deck.",
-     "zh": "用 broadsheet（报纸头版）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Broadsheet front page (broadsheet) template and its newsprint palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用报纸头版（broadsheet）模板的报纸版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"broadsheet\", prs)"
    }
@@ -1800,8 +1800,8 @@
      "render_fp": "4e2b89afb8b1ca89655cf473f59ef40c010e15b3bb1610f7901a2ca8d57f4ff3",
      "python": "k = vl.use(\"journal\", prs)",
      "prompt": {
-      "en": "Use the journal (Journal article) visual language for this deck.",
-      "zh": "用 journal（学术期刊）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Journal article (journal) template and its paper palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用学术期刊（journal）模板的论文白版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -1842,8 +1842,8 @@
      "render_fp": "8582733b188a17e01c987cf707a030c334b7828bb5a46f88dc8728d6c8a804bc",
      "python": "k = vl.use(\"journal\", prs, ground=\"green\")",
      "prompt": {
-      "en": "Use the journal (Journal article) visual language, on its title green ground, for this deck.",
-      "zh": "用 journal（学术期刊）视觉语言的期刊绿版做这份 PPT。"
+      "en": "Use slide-maker with the Journal article (journal) template and its title green palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用学术期刊（journal）模板的期刊绿版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -1936,8 +1936,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the journal (Journal article) visual language for this deck.",
-     "zh": "用 journal（学术期刊）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Journal article (journal) template and its paper palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用学术期刊（journal）模板的论文白版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"journal\", prs)"
    }
@@ -2009,8 +2009,8 @@
      "render_fp": "ca6e35e511cb817513126375e4234919067b61a15be583123875675a53945a2e",
      "python": "k = vl.use(\"tally\", prs)",
      "prompt": {
-      "en": "Use the tally (Data tally) visual language for this deck.",
-      "zh": "用 tally（数据账本）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Data tally (tally) template and its white grid palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用数据账本（tally）模板的白网格版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -2052,8 +2052,8 @@
      "render_fp": "bdcd4381ae5a9b455123b4eb540c3a922f11ac8fea7d4947cc4f97a239544a94",
      "python": "k = vl.use(\"tally\", prs, ground=\"night\")",
      "prompt": {
-      "en": "Use the tally (Data tally) visual language, on its night ledger ground, for this deck.",
-      "zh": "用 tally（数据账本）视觉语言的夜间账本版做这份 PPT。"
+      "en": "Use slide-maker with the Data tally (tally) template and its night ledger palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用数据账本（tally）模板的夜间账本版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -2108,8 +2108,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the tally (Data tally) visual language for this deck.",
-     "zh": "用 tally（数据账本）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Data tally (tally) template and its white grid palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用数据账本（tally）模板的白网格版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"tally\", prs)"
    }
@@ -2183,8 +2183,8 @@
      "render_fp": "083f3eb516fb10ee73b39aaf6f51f0ac9cc866e72370beb61d48fcd5182fb757",
      "python": "k = vl.use(\"chalkboard\", prs)",
      "prompt": {
-      "en": "Use the chalkboard (Chalkboard) visual language for this deck.",
-      "zh": "用 chalkboard（黑板报）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Chalkboard (chalkboard) template and its green board palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用黑板报（chalkboard）模板的绿黑板版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -2228,8 +2228,8 @@
      "render_fp": "f4ee8e4471b8f3eef6272bbf682544d5fffc640a3858409bfa503508ac4dc350",
      "python": "k = vl.use(\"chalkboard\", prs, ground=\"slate\")",
      "prompt": {
-      "en": "Use the chalkboard (Chalkboard) visual language, on its slate ground, for this deck.",
-      "zh": "用 chalkboard（黑板报）视觉语言的石板版做这份 PPT。"
+      "en": "Use slide-maker with the Chalkboard (chalkboard) template and its slate palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用黑板报（chalkboard）模板的石板版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -2289,8 +2289,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the chalkboard (Chalkboard) visual language for this deck.",
-     "zh": "用 chalkboard（黑板报）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Chalkboard (chalkboard) template and its green board palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用黑板报（chalkboard）模板的绿黑板版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"chalkboard\", prs)"
    }
@@ -2366,8 +2366,8 @@
      "render_fp": "e7162d6a5ba291bc8e848e6e717d3b81dab48f30c69c324509d6e43bed7bd93b",
      "python": "k = vl.use(\"interface\", prs)",
      "prompt": {
-      "en": "Use the interface (Product interface) visual language for this deck.",
-      "zh": "用 interface（产品界面）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Product interface (interface) template and its app light palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用产品界面（interface）模板的浅色界面版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -2412,8 +2412,8 @@
      "render_fp": "a86efd406eb8863d54094fec06e17a4ea202a6a57c47d787b3676c82f6f90aaa",
      "python": "k = vl.use(\"interface\", prs, ground=\"dark\")",
      "prompt": {
-      "en": "Use the interface (Product interface) visual language, on its dark mode ground, for this deck.",
-      "zh": "用 interface（产品界面）视觉语言的深色模式版做这份 PPT。"
+      "en": "Use slide-maker with the Product interface (interface) template and its dark mode palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用产品界面（interface）模板的深色模式版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -2501,8 +2501,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the interface (Product interface) visual language for this deck.",
-     "zh": "用 interface（产品界面）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Product interface (interface) template and its app light palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用产品界面（interface）模板的浅色界面版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"interface\", prs)"
    }
@@ -2582,8 +2582,8 @@
      "render_fp": "f12985b488e0125d13172121a7fcee8dfe0b05e12e3436fc6fcd93b0127634fa",
      "python": "k = vl.use(\"wayfinding\", prs)",
      "prompt": {
-      "en": "Use the wayfinding (Wayfinding) visual language for this deck.",
-      "zh": "用 wayfinding（导视线路）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Wayfinding (wayfinding) template and its enamel palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用导视线路（wayfinding）模板的珐琅白版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -2629,8 +2629,8 @@
      "render_fp": "e29571615fb6ebb976603b8ceb087f3b610fca6ff450caa445902fcf9f17396c",
      "python": "k = vl.use(\"wayfinding\", prs, ground=\"night\")",
      "prompt": {
-      "en": "Use the wayfinding (Wayfinding) visual language, on its navy ground, for this deck.",
-      "zh": "用 wayfinding（导视线路）视觉语言的藏青夜间版做这份 PPT。"
+      "en": "Use slide-maker with the Wayfinding (wayfinding) template and its navy palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用导视线路（wayfinding）模板的藏青夜间版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -2707,8 +2707,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the wayfinding (Wayfinding) visual language for this deck.",
-     "zh": "用 wayfinding（导视线路）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Wayfinding (wayfinding) template and its enamel palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用导视线路（wayfinding）模板的珐琅白版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"wayfinding\", prs)"
    }
@@ -2782,8 +2782,8 @@
      "render_fp": "068ff72072b1bc583f15e6ca39df51a1ba54ccd4eea4e9628c4b0179195c7a6c",
      "python": "k = vl.use(\"herbarium\", prs)",
      "prompt": {
-      "en": "Use the herbarium (Herbarium plate) visual language for this deck.",
-      "zh": "用 herbarium（标本图鉴）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Herbarium plate (herbarium) template and its archival paper palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用标本图鉴（herbarium）模板的档案纸版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -2825,8 +2825,8 @@
      "render_fp": "3fcd65da2618b3a74d4a415b84c0fd83be3554544d61059cfdd195581711e28a",
      "python": "k = vl.use(\"herbarium\", prs, ground=\"cabinet\")",
      "prompt": {
-      "en": "Use the herbarium (Herbarium plate) visual language, on its specimen cabinet ground, for this deck.",
-      "zh": "用 herbarium（标本图鉴）视觉语言的标本柜版做这份 PPT。"
+      "en": "Use slide-maker with the Herbarium plate (herbarium) template and its specimen cabinet palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用标本图鉴（herbarium）模板的标本柜版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -2872,8 +2872,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the herbarium (Herbarium plate) visual language for this deck.",
-     "zh": "用 herbarium（标本图鉴）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Herbarium plate (herbarium) template and its archival paper palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用标本图鉴（herbarium）模板的档案纸版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"herbarium\", prs)"
    }
@@ -2949,8 +2949,8 @@
      "render_fp": "dc89a335adb5682657f67f31d7d506c5be6ea105bbc0d473766b387f3011c757",
      "python": "k = vl.use(\"airmail\", prs)",
      "prompt": {
-      "en": "Use the airmail (Air mail) visual language for this deck.",
-      "zh": "用 airmail（航空邮件）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Air mail (airmail) template and its envelope palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用航空邮件（airmail）模板的信封版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -2992,8 +2992,8 @@
      "render_fp": "4a07e5d8b13e20818b343a489fbd8b72c1454e6973f4820951be59e12b0ce469",
      "python": "k = vl.use(\"airmail\", prs, ground=\"night\")",
      "prompt": {
-      "en": "Use the airmail (Air mail) visual language, on its night mail ground, for this deck.",
-      "zh": "用 airmail（航空邮件）视觉语言的夜航版做这份 PPT。"
+      "en": "Use slide-maker with the Air mail (airmail) template and its night mail palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用航空邮件（airmail）模板的夜航版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -3035,8 +3035,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the airmail (Air mail) visual language for this deck.",
-     "zh": "用 airmail（航空邮件）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Air mail (airmail) template and its envelope palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用航空邮件（airmail）模板的信封版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"airmail\", prs)"
    }
@@ -3110,8 +3110,8 @@
      "render_fp": "59eec1538d982ca0fc58bf89e5a7f47377cfb4af8e48b62209c63b44505fda41",
      "python": "k = vl.use(\"vinyl\", prs)",
      "prompt": {
-      "en": "Use the vinyl (Vinyl record) visual language for this deck.",
-      "zh": "用 vinyl（黑胶唱片）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Vinyl record (vinyl) template and its black sleeve palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用黑胶唱片（vinyl）模板的黑色封套版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -3153,8 +3153,8 @@
      "render_fp": "892b13eb130ad5d02fd85ed97c348f370cbc65870557b6ebbe688c61b5e91aaa",
      "python": "k = vl.use(\"vinyl\", prs, ground=\"cream\")",
      "prompt": {
-      "en": "Use the vinyl (Vinyl record) visual language, on its cream sleeve ground, for this deck.",
-      "zh": "用 vinyl（黑胶唱片）视觉语言的奶油封套版做这份 PPT。"
+      "en": "Use slide-maker with the Vinyl record (vinyl) template and its cream sleeve palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用黑胶唱片（vinyl）模板的奶油封套版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -3196,8 +3196,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the vinyl (Vinyl record) visual language for this deck.",
-     "zh": "用 vinyl（黑胶唱片）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Vinyl record (vinyl) template and its black sleeve palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用黑胶唱片（vinyl）模板的黑色封套版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"vinyl\", prs)"
    }
@@ -3273,8 +3273,8 @@
      "render_fp": "fdc7703e5b4e7b7af72364c7d479acd77232f19919427897802ee7c27d0b68e2",
      "python": "k = vl.use(\"receipt\", prs)",
      "prompt": {
-      "en": "Use the receipt (Shop receipt) visual language for this deck.",
-      "zh": "用 receipt（购物小票）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Shop receipt (receipt) template and its till slip palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用购物小票（receipt）模板的热敏小票版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -3316,8 +3316,8 @@
      "render_fp": "0221ca151b8e421d887bab0398aca8db5e8f0ba5cae472ee6c727b6e49dbb617",
      "python": "k = vl.use(\"receipt\", prs, ground=\"carbon\")",
      "prompt": {
-      "en": "Use the receipt (Shop receipt) visual language, on its carbon copy ground, for this deck.",
-      "zh": "用 receipt（购物小票）视觉语言的复写联版做这份 PPT。"
+      "en": "Use slide-maker with the Shop receipt (receipt) template and its carbon copy palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用购物小票（receipt）模板的复写联版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -3357,8 +3357,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the receipt (Shop receipt) visual language for this deck.",
-     "zh": "用 receipt（购物小票）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Shop receipt (receipt) template and its till slip palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用购物小票（receipt）模板的热敏小票版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"receipt\", prs)"
    }
@@ -3432,8 +3432,8 @@
      "render_fp": "7070eedd5387180d22e7d394a1c251ac484569332b801098b33a0934dcc03c76",
      "python": "k = vl.use(\"comic\", prs)",
      "prompt": {
-      "en": "Use the comic (Comic panels) visual language for this deck.",
-      "zh": "用 comic（漫画分镜）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Comic panels (comic) template and its newsprint palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用漫画分镜（comic）模板的新闻纸版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -3475,8 +3475,8 @@
      "render_fp": "d742c144d381c46db57bfb6eec2182b1707e7b6a5b32471f8877f917cc197656",
      "python": "k = vl.use(\"comic\", prs, ground=\"noir\")",
      "prompt": {
-      "en": "Use the comic (Comic panels) visual language, on its noir ground, for this deck.",
-      "zh": "用 comic（漫画分镜）视觉语言的黑色电影版做这份 PPT。"
+      "en": "Use slide-maker with the Comic panels (comic) template and its noir palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用漫画分镜（comic）模板的黑色电影版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -3513,8 +3513,8 @@
    "derived": [],
    "usage": {
     "prompt": {
-     "en": "Use the comic (Comic panels) visual language for this deck.",
-     "zh": "用 comic（漫画分镜）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Comic panels (comic) template and its newsprint palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用漫画分镜（comic）模板的新闻纸版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"comic\", prs)"
    }
@@ -3590,8 +3590,8 @@
      "render_fp": "d21169fbecba33917101827226a39786d046e54ec5ea9fa9c5a2f7e3ca24115b",
      "python": "k = vl.use(\"pixel\", prs)",
      "prompt": {
-      "en": "Use the pixel (Pixel game) visual language for this deck.",
-      "zh": "用 pixel（像素游戏）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Pixel game (pixel) template and its handheld green palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用像素游戏（pixel）模板的掌机绿屏版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -3633,8 +3633,8 @@
      "render_fp": "f5aaaf424731c03da076b2a2fa2f878b67fc9fb6fe4ee36033c5af9926acefb2",
      "python": "k = vl.use(\"pixel\", prs, ground=\"arcade\")",
      "prompt": {
-      "en": "Use the pixel (Pixel game) visual language, on its arcade night ground, for this deck.",
-      "zh": "用 pixel（像素游戏）视觉语言的街机夜屏版做这份 PPT。"
+      "en": "Use slide-maker with the Pixel game (pixel) template and its arcade night palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用像素游戏（pixel）模板的街机夜屏版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -3693,8 +3693,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the pixel (Pixel game) visual language for this deck.",
-     "zh": "用 pixel（像素游戏）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Pixel game (pixel) template and its handheld green palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用像素游戏（pixel）模板的掌机绿屏版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"pixel\", prs)"
    }
@@ -3770,8 +3770,8 @@
      "render_fp": "b8e98dd7c7d795b5a57cce08d9caf89b6999753532bb5cad302e9062b86ccf8f",
      "python": "k = vl.use(\"bricks\", prs)",
      "prompt": {
-      "en": "Use the bricks (Toy bricks) visual language for this deck.",
-      "zh": "用 bricks（积木）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Toy bricks (bricks) template and its grey baseplate palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用积木（bricks）模板的浅灰底板版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -3813,8 +3813,8 @@
      "render_fp": "791b43ca4dfd81d42d84057af84b38639e92bd3cd5855b7af05b114c967955a1",
      "python": "k = vl.use(\"bricks\", prs, ground=\"blue\")",
      "prompt": {
-      "en": "Use the bricks (Toy bricks) visual language, on its blue baseplate ground, for this deck.",
-      "zh": "用 bricks（积木）视觉语言的蓝色底板版做这份 PPT。"
+      "en": "Use slide-maker with the Toy bricks (bricks) template and its blue baseplate palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用积木（bricks）模板的蓝色底板版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -3849,8 +3849,8 @@
    "derived": [],
    "usage": {
     "prompt": {
-     "en": "Use the bricks (Toy bricks) visual language for this deck.",
-     "zh": "用 bricks（积木）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Toy bricks (bricks) template and its grey baseplate palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用积木（bricks）模板的浅灰底板版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"bricks\", prs)"
    }
@@ -3926,8 +3926,8 @@
      "render_fp": "b97a2ef33f83d2b563602d56a7e87342c6a1b416fb2c453bca5e13762ee0026b",
      "python": "k = vl.use(\"boardgame\", prs)",
      "prompt": {
-      "en": "Use the boardgame (Board game) visual language for this deck.",
-      "zh": "用 boardgame（棋盘游戏）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Board game (boardgame) template and its classic board palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用棋盘游戏（boardgame）模板的经典棋盘版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -3969,8 +3969,8 @@
      "render_fp": "d5e88a9cef3402cf9b899728c4b84038930e03a8fd26c25fc67ba04c918261eb",
      "python": "k = vl.use(\"boardgame\", prs, ground=\"felt\")",
      "prompt": {
-      "en": "Use the boardgame (Board game) visual language, on its deluxe felt table ground, for this deck.",
-      "zh": "用 boardgame（棋盘游戏）视觉语言的绿呢牌桌版做这份 PPT。"
+      "en": "Use slide-maker with the Board game (boardgame) template and its deluxe felt table palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用棋盘游戏（boardgame）模板的绿呢牌桌版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -4020,8 +4020,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the boardgame (Board game) visual language for this deck.",
-     "zh": "用 boardgame（棋盘游戏）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Board game (boardgame) template and its classic board palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用棋盘游戏（boardgame）模板的经典棋盘版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"boardgame\", prs)"
    }
@@ -4097,8 +4097,8 @@
      "render_fp": "dee6a8614ad82516a0377bf13fa90b0d4b50e02fd72471cb301b233d555d933b",
      "python": "k = vl.use(\"circuit\", prs)",
      "prompt": {
-      "en": "Use the circuit (Circuit board) visual language for this deck.",
-      "zh": "用 circuit（电路板）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Circuit board (circuit) template and its green solder mask palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用电路板（circuit）模板的绿油版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -4140,8 +4140,8 @@
      "render_fp": "0de85abeee02b8bdb0ec925ede6427e6e3a6ea3c58a36048287091146ef02688",
      "python": "k = vl.use(\"circuit\", prs, ground=\"matte\")",
      "prompt": {
-      "en": "Use the circuit (Circuit board) visual language, on its matte black board ground, for this deck.",
-      "zh": "用 circuit（电路板）视觉语言的哑光黑版做这份 PPT。"
+      "en": "Use slide-maker with the Circuit board (circuit) template and its matte black board palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用电路板（circuit）模板的哑光黑版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -4183,8 +4183,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the circuit (Circuit board) visual language for this deck.",
-     "zh": "用 circuit（电路板）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Circuit board (circuit) template and its green solder mask palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用电路板（circuit）模板的绿油版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"circuit\", prs)"
    }
@@ -4259,8 +4259,8 @@
      "render_fp": "7049fdfc27a23287f4252c545679f1376e0646af5e77454206a52097e57115bd",
      "python": "k = vl.use(\"topo\", prs)",
      "prompt": {
-      "en": "Use the topo (Topographic map) visual language for this deck.",
-      "zh": "用 topo（等高线地形图）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Topographic map (topo) template and its survey paper palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用等高线地形图（topo）模板的测绘图纸版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -4303,8 +4303,8 @@
      "render_fp": "91f3d38fc5dac40c56d5ac30885e3b296b95c8ada74a24a4ec1da3e54bc0c520",
      "python": "k = vl.use(\"topo\", prs, ground=\"night\")",
      "prompt": {
-      "en": "Use the topo (Topographic map) visual language, on its night relief ground, for this deck.",
-      "zh": "用 topo（等高线地形图）视觉语言的夜间地形版做这份 PPT。"
+      "en": "Use slide-maker with the Topographic map (topo) template and its night relief palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用等高线地形图（topo）模板的夜间地形版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -4354,8 +4354,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the topo (Topographic map) visual language for this deck.",
-     "zh": "用 topo（等高线地形图）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Topographic map (topo) template and its survey paper palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用等高线地形图（topo）模板的测绘图纸版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"topo\", prs)"
    }
@@ -4431,8 +4431,8 @@
      "render_fp": "60bbff7ca949b1d1b4c379f3bdfed30ecdfb6db3cde92e2bd62c2af3138029fe",
      "python": "k = vl.use(\"scoreboard\", prs)",
      "prompt": {
-      "en": "Use the scoreboard (Scoreboard) visual language for this deck.",
-      "zh": "用 scoreboard（体育记分牌）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Scoreboard (scoreboard) template and its night match palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用体育记分牌（scoreboard）模板的夜场版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -4474,8 +4474,8 @@
      "render_fp": "e47d839528c970c3d49299a2b6f6e67a63fc59fc70d339886ceffe84bf382074",
      "python": "k = vl.use(\"scoreboard\", prs, ground=\"turf\")",
      "prompt": {
-      "en": "Use the scoreboard (Scoreboard) visual language, on its turf ground, for this deck.",
-      "zh": "用 scoreboard（体育记分牌）视觉语言的草坪版做这份 PPT。"
+      "en": "Use slide-maker with the Scoreboard (scoreboard) template and its turf palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用体育记分牌（scoreboard）模板的草坪版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -4515,8 +4515,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the scoreboard (Scoreboard) visual language for this deck.",
-     "zh": "用 scoreboard（体育记分牌）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Scoreboard (scoreboard) template and its night match palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用体育记分牌（scoreboard）模板的夜场版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"scoreboard\", prs)"
    }
@@ -4590,8 +4590,8 @@
      "render_fp": "a464b0a0bbcfd32efc130e0265bc2bd76b1ae22fd74f6ae411a72b50403cc7da",
      "python": "k = vl.use(\"periodic\", prs)",
      "prompt": {
-      "en": "Use the periodic (Periodic table) visual language for this deck.",
-      "zh": "用 periodic（元素周期表）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Periodic table (periodic) template and its lab white palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用元素周期表（periodic）模板的实验室白，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -4633,8 +4633,8 @@
      "render_fp": "38b237871e7810b4fec30cf60874a9d1751cb6c579ffbea35eee372e5106a90d",
      "python": "k = vl.use(\"periodic\", prs, ground=\"dark\")",
      "prompt": {
-      "en": "Use the periodic (Periodic table) visual language, on its charcoal ground, for this deck.",
-      "zh": "用 periodic（元素周期表）视觉语言的炭黑做这份 PPT。"
+      "en": "Use slide-maker with the Periodic table (periodic) template and its charcoal palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用元素周期表（periodic）模板的炭黑，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -4680,8 +4680,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the periodic (Periodic table) visual language for this deck.",
-     "zh": "用 periodic（元素周期表）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Periodic table (periodic) template and its lab white palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用元素周期表（periodic）模板的实验室白，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"periodic\", prs)"
    }
@@ -4757,8 +4757,8 @@
      "render_fp": "bc43103b12ceb93c743eefe0007a4633867e405edcf6577f03b27719c6680c72",
      "python": "k = vl.use(\"recipe\", prs)",
      "prompt": {
-      "en": "Use the recipe (Recipe card) visual language for this deck.",
-      "zh": "用 recipe（食谱卡）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Recipe card (recipe) template and its gingham tablecloth palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用食谱卡（recipe）模板的红格桌布版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -4800,8 +4800,8 @@
      "render_fp": "0ab211eee1d5fbc4d3c4896a17e659879a3bcdeb70dc7d1920d539366f68a633",
      "python": "k = vl.use(\"recipe\", prs, ground=\"kraft\")",
      "prompt": {
-      "en": "Use the recipe (Recipe card) visual language, on its butcher paper ground, for this deck.",
-      "zh": "用 recipe（食谱卡）视觉语言的牛皮纸版做这份 PPT。"
+      "en": "Use slide-maker with the Recipe card (recipe) template and its butcher paper palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用食谱卡（recipe）模板的牛皮纸版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -4851,8 +4851,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the recipe (Recipe card) visual language for this deck.",
-     "zh": "用 recipe（食谱卡）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Recipe card (recipe) template and its gingham tablecloth palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用食谱卡（recipe）模板的红格桌布版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"recipe\", prs)"
    }
@@ -4926,8 +4926,8 @@
      "render_fp": "da8043d2fce6e5a6f43e0d34f89f043b9935aa12275b046490732438d99432b6",
      "python": "k = vl.use(\"stainedglass\", prs)",
      "prompt": {
-      "en": "Use the stainedglass (Stained glass) visual language for this deck.",
-      "zh": "用 stainedglass（彩绘玻璃）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Stained glass (stainedglass) template and its limestone palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用彩绘玻璃（stainedglass）模板的石灰石版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -4969,8 +4969,8 @@
      "render_fp": "9503d5b76c7bb23937daeaa073f998e8ef97626261af3a7175654b505bc515fa",
      "python": "k = vl.use(\"stainedglass\", prs, ground=\"nave\")",
      "prompt": {
-      "en": "Use the stainedglass (Stained glass) visual language, on its night nave ground, for this deck.",
-      "zh": "用 stainedglass（彩绘玻璃）视觉语言的夜晚中殿版做这份 PPT。"
+      "en": "Use slide-maker with the Stained glass (stainedglass) template and its night nave palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用彩绘玻璃（stainedglass）模板的夜晚中殿版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -5012,8 +5012,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the stainedglass (Stained glass) visual language for this deck.",
-     "zh": "用 stainedglass（彩绘玻璃）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Stained glass (stainedglass) template and its limestone palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用彩绘玻璃（stainedglass）模板的石灰石版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"stainedglass\", prs)"
    }
@@ -5089,8 +5089,8 @@
      "render_fp": "b77f1c42b2c2e0104bb0da96c387629d85cef6c1a621afe4260257fc62916105",
      "python": "k = vl.use(\"calendar\", prs)",
      "prompt": {
-      "en": "Use the calendar (Tear-off calendar) visual language for this deck.",
-      "zh": "用 calendar（撕页日历）视觉语言做这份 PPT。"
+      "en": "Use slide-maker with the Tear-off calendar (calendar) template and its paper on oak palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用撕页日历（calendar）模板的橡木桌白页版，根据我提供的材料制作 PPT。"
      }
     },
     {
@@ -5132,8 +5132,8 @@
      "render_fp": "fd958185cb9dca24a55476182576a47f916eadd8b268b5e65128440719c0b53f",
      "python": "k = vl.use(\"calendar\", prs, ground=\"night\")",
      "prompt": {
-      "en": "Use the calendar (Tear-off calendar) visual language, on its black stock at night ground, for this deck.",
-      "zh": "用 calendar（撕页日历）视觉语言的夜桌黑卡版做这份 PPT。"
+      "en": "Use slide-maker with the Tear-off calendar (calendar) template and its black stock at night palette to create a presentation from my material.",
+      "zh": "使用 slide-maker，采用撕页日历（calendar）模板的夜桌黑卡版，根据我提供的材料制作 PPT。"
      }
     }
    ],
@@ -5173,8 +5173,8 @@
    ],
    "usage": {
     "prompt": {
-     "en": "Use the calendar (Tear-off calendar) visual language for this deck.",
-     "zh": "用 calendar（撕页日历）视觉语言做这份 PPT。"
+     "en": "Use slide-maker with the Tear-off calendar (calendar) template and its paper on oak palette to create a presentation from my material.",
+     "zh": "使用 slide-maker，采用撕页日历（calendar）模板的橡木桌白页版，根据我提供的材料制作 PPT。"
     },
     "python": "k = vl.use(\"calendar\", prs)"
    }
