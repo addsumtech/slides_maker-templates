@@ -18,7 +18,7 @@
       empty: function (q) { return q ? 'No template matches “' + q + '”.' : 'No template of this kind yet.'; },
       clear: 'Clear filters', copyPrompt: 'Copy prompt', details: 'See all pages', copied: 'Copied',
       copyFailed: 'Copy failed — open the template and select the text',
-      pagesH: 'Seven page types', pagesNote: 'These previews use the same text across templates, so you can compare their layouts.',
+      pagesH: 'Seven page types', pagesNote: 'Click a page for a full-size view. These previews use the same text across templates, so you can compare their layouts.',
       notRendered: 'The page renders for this ground are not exported yet; the sample sheets below show the look.',
       sheetsH: 'Sample pages in both palettes', sheetsNote: 'See how this template looks with content suited to its style.',
       useH: 'How to use it', prompt: 'Paste this prompt into your AI assistant with slide-maker installed, and provide your material.', ground: 'Palette', close: 'Close',
@@ -34,7 +34,7 @@
       empty: function (q) { return q ? '没有匹配“' + q + '”的模板。' : '这一类暂时还没有。'; },
       clear: '清除筛选', copyPrompt: '复制提示词', details: '看全部页面', copied: '已复制',
       copyFailed: '复制失败，请打开这套模板手动选中文字',
-      pagesH: '七种页面', pagesNote: '每套模板使用同一份演示文字，方便在相同内容上比较画风。',
+      pagesH: '七种页面', pagesNote: '点击单页可查看高清图。每套模板使用同一份演示文字，方便在相同内容上比较画风。',
       notRendered: '这种底色的页面渲染还没有导出；下方的样张展示了它的外观。',
       sheetsH: '两种配色的样张', sheetsNote: '结合适合这套画风的题材，看看实际排版效果。',
       useH: '怎么用', prompt: '将提示词粘贴到已安装 slide-maker 的 AI 助手中，并提供你的材料。', ground: '配色', close: '关闭',
@@ -222,9 +222,9 @@
         on: { click: function (e) { copy(text, e.currentTarget); } } })]);
   }
 
-  function preview(src, label, width, height) {
+  function preview(src, label, width, height, fullSrc) {
     var button = el('button', { 'class': 'vl-preview', type: 'button', 'aria-label': t('enlarge') + ': ' + label,
-      on: { click: function () { openZoom(src, label, button); } } }, [
+      on: { click: function () { openZoom(fullSrc || src, label, button); } } }, [
       el('img', { src: src, alt: label, loading: 'lazy', decoding: 'async', width: width, height: height })
     ]);
     return button;
@@ -273,7 +273,8 @@
     var have = pts.filter(function (p) { return g.pages && g.pages[p.id]; });
     if (have.length) {
       body.appendChild(el('div', { 'class': 'vl-pages' }, have.map(function (p) {
-        return el('figure', null, [preview(asset(g.pages[p.id]), L(x.name) + ' ' + L(p.name) + ' ' + L(g.label), '960', '540'),
+        return el('figure', null, [preview(asset(g.pages[p.id]), L(x.name) + ' ' + L(p.name) + ' ' + L(g.label), '960', '540',
+          g.pages_hd && g.pages_hd[p.id] ? asset(g.pages_hd[p.id]) : null),
           el('figcaption', { text: L(p.name) })]);
       })));
       body.appendChild(el('p', { 'class': 'vl-note', text: t('pagesNote') }));

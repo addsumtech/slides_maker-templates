@@ -143,11 +143,16 @@ HARNESS = r"""<!doctype html><html><head><meta charset="utf-8"><style>body{margi
       if (prompt && !prompt.textContent.includes(palette.en) && !prompt.textContent.includes(palette.zh)) fail('prompt omits the selected palette');
       if (w.getComputedStyle(dlg.querySelector('.vl-copyrow')).alignItems !== 'center') fail('prompt is not vertically centered');
       const preview = dlg.querySelector('.vl-pages .vl-preview');
+      if (w.performance.getEntriesByType('resource').some(r => r.name.includes('@2x.jpg'))) fail('full-size images loaded before a page was enlarged');
       preview.click(); await sleep(80);
       const zoom = d.getElementById('vlZoom');
       if (!zoom.open) fail('clicking a page did not enlarge it');
-      if (d.getElementById('vlZoomImage').src !== preview.querySelector('img').src) fail('the enlarged image is not the selected page');
-      if (d.getElementById('vlOriginal').href !== preview.querySelector('img').src) fail('original-image link is not the selected page');
+      const fullSrc = new URL('/languages/' + ink.grounds[gb ? 1 : 0].pages_hd.cover, w.location.href).href;
+      if (d.getElementById('vlZoomImage').src !== fullSrc || fullSrc === preview.querySelector('img').src) fail('the enlarged image is not the selected full-size page');
+      if (d.getElementById('vlOriginal').href !== fullSrc) fail('original-image link is not the full-size page');
+      const unloadedZoom = await settled(zoom);
+      const fullImage = d.getElementById('vlZoomImage');
+      if (unloadedZoom.length || fullImage.naturalWidth !== 1920 || fullImage.naturalHeight !== 1080) fail('the full-size page did not load at 1920x1080');
       if (zoom.scrollWidth > zoom.clientWidth + 1) fail('image viewer scrolls sideways');
       d.getElementById('vlZoomClose').click(); await sleep(80);
       if (zoom.open || !dlg.open || d.activeElement !== preview) fail('closing the image viewer did not return focus to its preview: zoom=' + zoom.open + ', detail=' + dlg.open + ', focus=' + d.activeElement.outerHTML.slice(0, 160));
@@ -335,7 +340,9 @@ def main(argv=None):
     lib = json.loads(lib_p.read_text(encoding="utf-8"))
     for x in lib.get("languages", []):
         for g in x.get("grounds", []):
-            for rel in [g.get("sample")] + list((g.get("pages") or {}).values()):
+            if set(g.get("pages_hd") or {}) != {p["id"] for p in lib["page_types"]}:
+                fails.append("{}/{}: missing full-size page images".format(x.get("id"), g.get("id")))
+            for rel in [g.get("sample")] + list((g.get("pages") or {}).values()) + list((g.get("pages_hd") or {}).values()):
                 if not rel or not (SITE / "languages" / rel).is_file():
                     fails.append("{}/{}: library.json names {} and it is not on disk".format(x.get("id"), g.get("id"), rel))
     js = (SITE / "languages" / "library.js").read_text(encoding="utf-8")

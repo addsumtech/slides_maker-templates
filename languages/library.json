@@ -137,6 +137,15 @@
       "data": "media/editorial/light/data.jpg",
       "closing": "media/editorial/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/editorial/light/cover@2x.jpg",
+      "section": "media/editorial/light/section@2x.jpg",
+      "image_text": "media/editorial/light/image_text@2x.jpg",
+      "points": "media/editorial/light/points@2x.jpg",
+      "quote": "media/editorial/light/quote@2x.jpg",
+      "data": "media/editorial/light/data@2x.jpg",
+      "closing": "media/editorial/light/closing@2x.jpg"
+     },
      "render_fp": "178c149712d3df06c40bee5cecc4337d2a692b51adad98ca7d9ad84da53bfbf7",
      "python": "k = vl.use(\"editorial\", prs)",
      "prompt": {
@@ -180,6 +189,15 @@
       "quote": "media/editorial/ink/quote.jpg",
       "data": "media/editorial/ink/data.jpg",
       "closing": "media/editorial/ink/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/editorial/ink/cover@2x.jpg",
+      "section": "media/editorial/ink/section@2x.jpg",
+      "image_text": "media/editorial/ink/image_text@2x.jpg",
+      "points": "media/editorial/ink/points@2x.jpg",
+      "quote": "media/editorial/ink/quote@2x.jpg",
+      "data": "media/editorial/ink/data@2x.jpg",
+      "closing": "media/editorial/ink/closing@2x.jpg"
      },
      "render_fp": "9961986675a78aa0d7c073bc6145a809612330b7e0c88ced194af358a03e7d4b",
      "python": "k = vl.use(\"editorial\", prs, ground=\"ink\")",
@@ -298,6 +316,15 @@
       "data": "media/soft/light/data.jpg",
       "closing": "media/soft/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/soft/light/cover@2x.jpg",
+      "section": "media/soft/light/section@2x.jpg",
+      "image_text": "media/soft/light/image_text@2x.jpg",
+      "points": "media/soft/light/points@2x.jpg",
+      "quote": "media/soft/light/quote@2x.jpg",
+      "data": "media/soft/light/data@2x.jpg",
+      "closing": "media/soft/light/closing@2x.jpg"
+     },
      "render_fp": "dbea3b66ebd948886fea48cb4b5ffd59dc0140c4fc81ad6a410f043752af1024",
      "python": "k = vl.use(\"soft\", prs)",
      "prompt": {
@@ -343,6 +370,15 @@
       "quote": "media/soft/dusk/quote.jpg",
       "data": "media/soft/dusk/data.jpg",
       "closing": "media/soft/dusk/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/soft/dusk/cover@2x.jpg",
+      "section": "media/soft/dusk/section@2x.jpg",
+      "image_text": "media/soft/dusk/image_text@2x.jpg",
+      "points": "media/soft/dusk/points@2x.jpg",
+      "quote": "media/soft/dusk/quote@2x.jpg",
+      "data": "media/soft/dusk/data@2x.jpg",
+      "closing": "media/soft/dusk/closing@2x.jpg"
      },
      "render_fp": "a21a516908ca2c6238121b759d045f1e31213e70ae6bc196203f3c1606d73697",
      "python": "k = vl.use(\"soft\", prs, ground=\"dusk\")",
@@ -461,6 +497,15 @@
       "data": "media/collage/light/data.jpg",
       "closing": "media/collage/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/collage/light/cover@2x.jpg",
+      "section": "media/collage/light/section@2x.jpg",
+      "image_text": "media/collage/light/image_text@2x.jpg",
+      "points": "media/collage/light/points@2x.jpg",
+      "quote": "media/collage/light/quote@2x.jpg",
+      "data": "media/collage/light/data@2x.jpg",
+      "closing": "media/collage/light/closing@2x.jpg"
+     },
      "render_fp": "019e5fbce6ffc9e1c61259bb72b8a81cc780be3e2989e18f5ea9f8c97f6a279f",
      "python": "k = vl.use(\"collage\", prs)",
      "prompt": {
@@ -506,6 +551,15 @@
       "quote": "media/collage/slate/quote.jpg",
       "data": "media/collage/slate/data.jpg",
       "closing": "media/collage/slate/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/collage/slate/cover@2x.jpg",
+      "section": "media/collage/slate/section@2x.jpg",
+      "image_text": "media/collage/slate/image_text@2x.jpg",
+      "points": "media/collage/slate/points@2x.jpg",
+      "quote": "media/collage/slate/quote@2x.jpg",
+      "data": "media/collage/slate/data@2x.jpg",
+      "closing": "media/collage/slate/closing@2x.jpg"
      },
      "render_fp": "eb0159dfe326bfd4cf0dac49c4fc39e8a91d32fd255d4a889b7a25ac59812ff5",
      "python": "k = vl.use(\"collage\", prs, ground=\"slate\")",
@@ -625,6 +679,15 @@
       "data": "media/storybook/light/data.jpg",
       "closing": "media/storybook/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/storybook/light/cover@2x.jpg",
+      "section": "media/storybook/light/section@2x.jpg",
+      "image_text": "media/storybook/light/image_text@2x.jpg",
+      "points": "media/storybook/light/points@2x.jpg",
+      "quote": "media/storybook/light/quote@2x.jpg",
+      "data": "media/storybook/light/data@2x.jpg",
+      "closing": "media/storybook/light/closing@2x.jpg"
+     },
      "render_fp": "055ad9b1cb3748de1fd6f79bfd4da770cedbb5eb3534c9102e88b74119221e9c",
      "python": "k = vl.use(\"storybook\", prs)",
      "prompt": {
@@ -670,6 +733,15 @@
       "quote": "media/storybook/meadow/quote.jpg",
       "data": "media/storybook/meadow/data.jpg",
       "closing": "media/storybook/meadow/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/storybook/meadow/cover@2x.jpg",
+      "section": "media/storybook/meadow/section@2x.jpg",
+      "image_text": "media/storybook/meadow/image_text@2x.jpg",
+      "points": "media/storybook/meadow/points@2x.jpg",
+      "quote": "media/storybook/meadow/quote@2x.jpg",
+      "data": "media/storybook/meadow/data@2x.jpg",
+      "closing": "media/storybook/meadow/closing@2x.jpg"
      },
      "render_fp": "ff02b084cc8b8107211d8245f69adf31073915361ed876abdbb960066faf2bca",
      "python": "k = vl.use(\"storybook\", prs, ground=\"meadow\")",
@@ -788,6 +860,15 @@
       "data": "media/ink/light/data.jpg",
       "closing": "media/ink/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/ink/light/cover@2x.jpg",
+      "section": "media/ink/light/section@2x.jpg",
+      "image_text": "media/ink/light/image_text@2x.jpg",
+      "points": "media/ink/light/points@2x.jpg",
+      "quote": "media/ink/light/quote@2x.jpg",
+      "data": "media/ink/light/data@2x.jpg",
+      "closing": "media/ink/light/closing@2x.jpg"
+     },
      "render_fp": "6884ac041f21d62c361e72b52fcf45ad97c3ef4d17e909aea6e16014354f05fd",
      "python": "k = vl.use(\"ink\", prs)",
      "prompt": {
@@ -829,6 +910,15 @@
       "quote": "media/ink/night/quote.jpg",
       "data": "media/ink/night/data.jpg",
       "closing": "media/ink/night/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/ink/night/cover@2x.jpg",
+      "section": "media/ink/night/section@2x.jpg",
+      "image_text": "media/ink/night/image_text@2x.jpg",
+      "points": "media/ink/night/points@2x.jpg",
+      "quote": "media/ink/night/quote@2x.jpg",
+      "data": "media/ink/night/data@2x.jpg",
+      "closing": "media/ink/night/closing@2x.jpg"
      },
      "render_fp": "fe458ff8082a9cf8803cfe977d5d51dd2ee7872512bb82ebc150c65af062ce47",
      "python": "k = vl.use(\"ink\", prs, ground=\"night\")",
@@ -950,6 +1040,15 @@
       "data": "media/poster/light/data.jpg",
       "closing": "media/poster/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/poster/light/cover@2x.jpg",
+      "section": "media/poster/light/section@2x.jpg",
+      "image_text": "media/poster/light/image_text@2x.jpg",
+      "points": "media/poster/light/points@2x.jpg",
+      "quote": "media/poster/light/quote@2x.jpg",
+      "data": "media/poster/light/data@2x.jpg",
+      "closing": "media/poster/light/closing@2x.jpg"
+     },
      "render_fp": "09ec38f0ae7c44da309ffcf939cd0dbd58e102acc06c7bc308f090cb2e0b546e",
      "python": "k = vl.use(\"poster\", prs)",
      "prompt": {
@@ -993,6 +1092,15 @@
       "quote": "media/poster/paper/quote.jpg",
       "data": "media/poster/paper/data.jpg",
       "closing": "media/poster/paper/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/poster/paper/cover@2x.jpg",
+      "section": "media/poster/paper/section@2x.jpg",
+      "image_text": "media/poster/paper/image_text@2x.jpg",
+      "points": "media/poster/paper/points@2x.jpg",
+      "quote": "media/poster/paper/quote@2x.jpg",
+      "data": "media/poster/paper/data@2x.jpg",
+      "closing": "media/poster/paper/closing@2x.jpg"
      },
      "render_fp": "91d2c1cd7f6c2ce27d48a436d30abc7f304ca0c6e69ae3d2129896bb121be771",
      "python": "k = vl.use(\"poster\", prs, ground=\"paper\")",
@@ -1126,6 +1234,15 @@
       "data": "media/cutpaper/light/data.jpg",
       "closing": "media/cutpaper/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/cutpaper/light/cover@2x.jpg",
+      "section": "media/cutpaper/light/section@2x.jpg",
+      "image_text": "media/cutpaper/light/image_text@2x.jpg",
+      "points": "media/cutpaper/light/points@2x.jpg",
+      "quote": "media/cutpaper/light/quote@2x.jpg",
+      "data": "media/cutpaper/light/data@2x.jpg",
+      "closing": "media/cutpaper/light/closing@2x.jpg"
+     },
      "render_fp": "e4bcddc68558d3ce0dd7a8cd370522060a7993e723d78565bb2a8c7174930cbd",
      "python": "k = vl.use(\"cutpaper\", prs)",
      "prompt": {
@@ -1171,6 +1288,15 @@
       "quote": "media/cutpaper/night/quote.jpg",
       "data": "media/cutpaper/night/data.jpg",
       "closing": "media/cutpaper/night/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/cutpaper/night/cover@2x.jpg",
+      "section": "media/cutpaper/night/section@2x.jpg",
+      "image_text": "media/cutpaper/night/image_text@2x.jpg",
+      "points": "media/cutpaper/night/points@2x.jpg",
+      "quote": "media/cutpaper/night/quote@2x.jpg",
+      "data": "media/cutpaper/night/data@2x.jpg",
+      "closing": "media/cutpaper/night/closing@2x.jpg"
      },
      "render_fp": "41df8abb40eb272627f96cd57980409e2adcb4968605727b07672be56a1889db",
      "python": "k = vl.use(\"cutpaper\", prs, ground=\"night\")",
@@ -1291,6 +1417,15 @@
       "data": "media/drafting/light/data.jpg",
       "closing": "media/drafting/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/drafting/light/cover@2x.jpg",
+      "section": "media/drafting/light/section@2x.jpg",
+      "image_text": "media/drafting/light/image_text@2x.jpg",
+      "points": "media/drafting/light/points@2x.jpg",
+      "quote": "media/drafting/light/quote@2x.jpg",
+      "data": "media/drafting/light/data@2x.jpg",
+      "closing": "media/drafting/light/closing@2x.jpg"
+     },
      "render_fp": "3075660d254bec4713aba12141c3d026bdd720279472bead693061a4eaa5b067",
      "python": "k = vl.use(\"drafting\", prs)",
      "prompt": {
@@ -1332,6 +1467,15 @@
       "quote": "media/drafting/cyanotype/quote.jpg",
       "data": "media/drafting/cyanotype/data.jpg",
       "closing": "media/drafting/cyanotype/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/drafting/cyanotype/cover@2x.jpg",
+      "section": "media/drafting/cyanotype/section@2x.jpg",
+      "image_text": "media/drafting/cyanotype/image_text@2x.jpg",
+      "points": "media/drafting/cyanotype/points@2x.jpg",
+      "quote": "media/drafting/cyanotype/quote@2x.jpg",
+      "data": "media/drafting/cyanotype/data@2x.jpg",
+      "closing": "media/drafting/cyanotype/closing@2x.jpg"
      },
      "render_fp": "2b79d07feec53aa3676644f2347bf5c33b2477120f92ee797538d12db27eb99d",
      "python": "k = vl.use(\"drafting\", prs, ground=\"cyanotype\")",
@@ -1459,6 +1603,15 @@
       "data": "media/starlit/light/data.jpg",
       "closing": "media/starlit/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/starlit/light/cover@2x.jpg",
+      "section": "media/starlit/light/section@2x.jpg",
+      "image_text": "media/starlit/light/image_text@2x.jpg",
+      "points": "media/starlit/light/points@2x.jpg",
+      "quote": "media/starlit/light/quote@2x.jpg",
+      "data": "media/starlit/light/data@2x.jpg",
+      "closing": "media/starlit/light/closing@2x.jpg"
+     },
      "render_fp": "5541114c952aefaa2101da33a484725fa35899ffad6e78fdb38a263d708b8ef7",
      "python": "k = vl.use(\"starlit\", prs)",
      "prompt": {
@@ -1500,6 +1653,15 @@
       "quote": "media/starlit/dawn/quote.jpg",
       "data": "media/starlit/dawn/data.jpg",
       "closing": "media/starlit/dawn/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/starlit/dawn/cover@2x.jpg",
+      "section": "media/starlit/dawn/section@2x.jpg",
+      "image_text": "media/starlit/dawn/image_text@2x.jpg",
+      "points": "media/starlit/dawn/points@2x.jpg",
+      "quote": "media/starlit/dawn/quote@2x.jpg",
+      "data": "media/starlit/dawn/data@2x.jpg",
+      "closing": "media/starlit/dawn/closing@2x.jpg"
      },
      "render_fp": "3d2954a30cc0870a1dac0f8499c61e6b9fffce9ad9bff07fbe32de3fa8da9dec",
      "python": "k = vl.use(\"starlit\", prs, ground=\"dawn\")",
@@ -1607,6 +1769,15 @@
       "data": "media/broadsheet/light/data.jpg",
       "closing": "media/broadsheet/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/broadsheet/light/cover@2x.jpg",
+      "section": "media/broadsheet/light/section@2x.jpg",
+      "image_text": "media/broadsheet/light/image_text@2x.jpg",
+      "points": "media/broadsheet/light/points@2x.jpg",
+      "quote": "media/broadsheet/light/quote@2x.jpg",
+      "data": "media/broadsheet/light/data@2x.jpg",
+      "closing": "media/broadsheet/light/closing@2x.jpg"
+     },
      "render_fp": "a48b26a0232f2b42dcc983a367d88cfc5dc9641497d9e29ad8161af54581d21b",
      "python": "k = vl.use(\"broadsheet\", prs)",
      "prompt": {
@@ -1648,6 +1819,15 @@
       "quote": "media/broadsheet/salmon/quote.jpg",
       "data": "media/broadsheet/salmon/data.jpg",
       "closing": "media/broadsheet/salmon/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/broadsheet/salmon/cover@2x.jpg",
+      "section": "media/broadsheet/salmon/section@2x.jpg",
+      "image_text": "media/broadsheet/salmon/image_text@2x.jpg",
+      "points": "media/broadsheet/salmon/points@2x.jpg",
+      "quote": "media/broadsheet/salmon/quote@2x.jpg",
+      "data": "media/broadsheet/salmon/data@2x.jpg",
+      "closing": "media/broadsheet/salmon/closing@2x.jpg"
      },
      "render_fp": "6bb168135d97f47fe0cce03455bdb29d0c014a32d25b1bb30be7ea4c1d996fe6",
      "python": "k = vl.use(\"broadsheet\", prs, ground=\"salmon\")",
@@ -1797,6 +1977,15 @@
       "data": "media/journal/light/data.jpg",
       "closing": "media/journal/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/journal/light/cover@2x.jpg",
+      "section": "media/journal/light/section@2x.jpg",
+      "image_text": "media/journal/light/image_text@2x.jpg",
+      "points": "media/journal/light/points@2x.jpg",
+      "quote": "media/journal/light/quote@2x.jpg",
+      "data": "media/journal/light/data@2x.jpg",
+      "closing": "media/journal/light/closing@2x.jpg"
+     },
      "render_fp": "4e2b89afb8b1ca89655cf473f59ef40c010e15b3bb1610f7901a2ca8d57f4ff3",
      "python": "k = vl.use(\"journal\", prs)",
      "prompt": {
@@ -1838,6 +2027,15 @@
       "quote": "media/journal/green/quote.jpg",
       "data": "media/journal/green/data.jpg",
       "closing": "media/journal/green/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/journal/green/cover@2x.jpg",
+      "section": "media/journal/green/section@2x.jpg",
+      "image_text": "media/journal/green/image_text@2x.jpg",
+      "points": "media/journal/green/points@2x.jpg",
+      "quote": "media/journal/green/quote@2x.jpg",
+      "data": "media/journal/green/data@2x.jpg",
+      "closing": "media/journal/green/closing@2x.jpg"
      },
      "render_fp": "8582733b188a17e01c987cf707a030c334b7828bb5a46f88dc8728d6c8a804bc",
      "python": "k = vl.use(\"journal\", prs, ground=\"green\")",
@@ -2006,6 +2204,15 @@
       "data": "media/tally/light/data.jpg",
       "closing": "media/tally/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/tally/light/cover@2x.jpg",
+      "section": "media/tally/light/section@2x.jpg",
+      "image_text": "media/tally/light/image_text@2x.jpg",
+      "points": "media/tally/light/points@2x.jpg",
+      "quote": "media/tally/light/quote@2x.jpg",
+      "data": "media/tally/light/data@2x.jpg",
+      "closing": "media/tally/light/closing@2x.jpg"
+     },
      "render_fp": "ca6e35e511cb817513126375e4234919067b61a15be583123875675a53945a2e",
      "python": "k = vl.use(\"tally\", prs)",
      "prompt": {
@@ -2048,6 +2255,15 @@
       "quote": "media/tally/night/quote.jpg",
       "data": "media/tally/night/data.jpg",
       "closing": "media/tally/night/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/tally/night/cover@2x.jpg",
+      "section": "media/tally/night/section@2x.jpg",
+      "image_text": "media/tally/night/image_text@2x.jpg",
+      "points": "media/tally/night/points@2x.jpg",
+      "quote": "media/tally/night/quote@2x.jpg",
+      "data": "media/tally/night/data@2x.jpg",
+      "closing": "media/tally/night/closing@2x.jpg"
      },
      "render_fp": "bdcd4381ae5a9b455123b4eb540c3a922f11ac8fea7d4947cc4f97a239544a94",
      "python": "k = vl.use(\"tally\", prs, ground=\"night\")",
@@ -2180,6 +2396,15 @@
       "data": "media/chalkboard/light/data.jpg",
       "closing": "media/chalkboard/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/chalkboard/light/cover@2x.jpg",
+      "section": "media/chalkboard/light/section@2x.jpg",
+      "image_text": "media/chalkboard/light/image_text@2x.jpg",
+      "points": "media/chalkboard/light/points@2x.jpg",
+      "quote": "media/chalkboard/light/quote@2x.jpg",
+      "data": "media/chalkboard/light/data@2x.jpg",
+      "closing": "media/chalkboard/light/closing@2x.jpg"
+     },
      "render_fp": "083f3eb516fb10ee73b39aaf6f51f0ac9cc866e72370beb61d48fcd5182fb757",
      "python": "k = vl.use(\"chalkboard\", prs)",
      "prompt": {
@@ -2224,6 +2449,15 @@
       "quote": "media/chalkboard/slate/quote.jpg",
       "data": "media/chalkboard/slate/data.jpg",
       "closing": "media/chalkboard/slate/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/chalkboard/slate/cover@2x.jpg",
+      "section": "media/chalkboard/slate/section@2x.jpg",
+      "image_text": "media/chalkboard/slate/image_text@2x.jpg",
+      "points": "media/chalkboard/slate/points@2x.jpg",
+      "quote": "media/chalkboard/slate/quote@2x.jpg",
+      "data": "media/chalkboard/slate/data@2x.jpg",
+      "closing": "media/chalkboard/slate/closing@2x.jpg"
      },
      "render_fp": "f4ee8e4471b8f3eef6272bbf682544d5fffc640a3858409bfa503508ac4dc350",
      "python": "k = vl.use(\"chalkboard\", prs, ground=\"slate\")",
@@ -2363,6 +2597,15 @@
       "data": "media/interface/light/data.jpg",
       "closing": "media/interface/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/interface/light/cover@2x.jpg",
+      "section": "media/interface/light/section@2x.jpg",
+      "image_text": "media/interface/light/image_text@2x.jpg",
+      "points": "media/interface/light/points@2x.jpg",
+      "quote": "media/interface/light/quote@2x.jpg",
+      "data": "media/interface/light/data@2x.jpg",
+      "closing": "media/interface/light/closing@2x.jpg"
+     },
      "render_fp": "e7162d6a5ba291bc8e848e6e717d3b81dab48f30c69c324509d6e43bed7bd93b",
      "python": "k = vl.use(\"interface\", prs)",
      "prompt": {
@@ -2408,6 +2651,15 @@
       "quote": "media/interface/dark/quote.jpg",
       "data": "media/interface/dark/data.jpg",
       "closing": "media/interface/dark/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/interface/dark/cover@2x.jpg",
+      "section": "media/interface/dark/section@2x.jpg",
+      "image_text": "media/interface/dark/image_text@2x.jpg",
+      "points": "media/interface/dark/points@2x.jpg",
+      "quote": "media/interface/dark/quote@2x.jpg",
+      "data": "media/interface/dark/data@2x.jpg",
+      "closing": "media/interface/dark/closing@2x.jpg"
      },
      "render_fp": "a86efd406eb8863d54094fec06e17a4ea202a6a57c47d787b3676c82f6f90aaa",
      "python": "k = vl.use(\"interface\", prs, ground=\"dark\")",
@@ -2579,6 +2831,15 @@
       "data": "media/wayfinding/light/data.jpg",
       "closing": "media/wayfinding/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/wayfinding/light/cover@2x.jpg",
+      "section": "media/wayfinding/light/section@2x.jpg",
+      "image_text": "media/wayfinding/light/image_text@2x.jpg",
+      "points": "media/wayfinding/light/points@2x.jpg",
+      "quote": "media/wayfinding/light/quote@2x.jpg",
+      "data": "media/wayfinding/light/data@2x.jpg",
+      "closing": "media/wayfinding/light/closing@2x.jpg"
+     },
      "render_fp": "f12985b488e0125d13172121a7fcee8dfe0b05e12e3436fc6fcd93b0127634fa",
      "python": "k = vl.use(\"wayfinding\", prs)",
      "prompt": {
@@ -2625,6 +2886,15 @@
       "quote": "media/wayfinding/night/quote.jpg",
       "data": "media/wayfinding/night/data.jpg",
       "closing": "media/wayfinding/night/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/wayfinding/night/cover@2x.jpg",
+      "section": "media/wayfinding/night/section@2x.jpg",
+      "image_text": "media/wayfinding/night/image_text@2x.jpg",
+      "points": "media/wayfinding/night/points@2x.jpg",
+      "quote": "media/wayfinding/night/quote@2x.jpg",
+      "data": "media/wayfinding/night/data@2x.jpg",
+      "closing": "media/wayfinding/night/closing@2x.jpg"
      },
      "render_fp": "e29571615fb6ebb976603b8ceb087f3b610fca6ff450caa445902fcf9f17396c",
      "python": "k = vl.use(\"wayfinding\", prs, ground=\"night\")",
@@ -2779,6 +3049,15 @@
       "data": "media/herbarium/light/data.jpg",
       "closing": "media/herbarium/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/herbarium/light/cover@2x.jpg",
+      "section": "media/herbarium/light/section@2x.jpg",
+      "image_text": "media/herbarium/light/image_text@2x.jpg",
+      "points": "media/herbarium/light/points@2x.jpg",
+      "quote": "media/herbarium/light/quote@2x.jpg",
+      "data": "media/herbarium/light/data@2x.jpg",
+      "closing": "media/herbarium/light/closing@2x.jpg"
+     },
      "render_fp": "068ff72072b1bc583f15e6ca39df51a1ba54ccd4eea4e9628c4b0179195c7a6c",
      "python": "k = vl.use(\"herbarium\", prs)",
      "prompt": {
@@ -2821,6 +3100,15 @@
       "quote": "media/herbarium/cabinet/quote.jpg",
       "data": "media/herbarium/cabinet/data.jpg",
       "closing": "media/herbarium/cabinet/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/herbarium/cabinet/cover@2x.jpg",
+      "section": "media/herbarium/cabinet/section@2x.jpg",
+      "image_text": "media/herbarium/cabinet/image_text@2x.jpg",
+      "points": "media/herbarium/cabinet/points@2x.jpg",
+      "quote": "media/herbarium/cabinet/quote@2x.jpg",
+      "data": "media/herbarium/cabinet/data@2x.jpg",
+      "closing": "media/herbarium/cabinet/closing@2x.jpg"
      },
      "render_fp": "3fcd65da2618b3a74d4a415b84c0fd83be3554544d61059cfdd195581711e28a",
      "python": "k = vl.use(\"herbarium\", prs, ground=\"cabinet\")",
@@ -2946,6 +3234,15 @@
       "data": "media/airmail/light/data.jpg",
       "closing": "media/airmail/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/airmail/light/cover@2x.jpg",
+      "section": "media/airmail/light/section@2x.jpg",
+      "image_text": "media/airmail/light/image_text@2x.jpg",
+      "points": "media/airmail/light/points@2x.jpg",
+      "quote": "media/airmail/light/quote@2x.jpg",
+      "data": "media/airmail/light/data@2x.jpg",
+      "closing": "media/airmail/light/closing@2x.jpg"
+     },
      "render_fp": "dc89a335adb5682657f67f31d7d506c5be6ea105bbc0d473766b387f3011c757",
      "python": "k = vl.use(\"airmail\", prs)",
      "prompt": {
@@ -2988,6 +3285,15 @@
       "quote": "media/airmail/night/quote.jpg",
       "data": "media/airmail/night/data.jpg",
       "closing": "media/airmail/night/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/airmail/night/cover@2x.jpg",
+      "section": "media/airmail/night/section@2x.jpg",
+      "image_text": "media/airmail/night/image_text@2x.jpg",
+      "points": "media/airmail/night/points@2x.jpg",
+      "quote": "media/airmail/night/quote@2x.jpg",
+      "data": "media/airmail/night/data@2x.jpg",
+      "closing": "media/airmail/night/closing@2x.jpg"
      },
      "render_fp": "4a07e5d8b13e20818b343a489fbd8b72c1454e6973f4820951be59e12b0ce469",
      "python": "k = vl.use(\"airmail\", prs, ground=\"night\")",
@@ -3107,6 +3413,15 @@
       "data": "media/vinyl/light/data.jpg",
       "closing": "media/vinyl/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/vinyl/light/cover@2x.jpg",
+      "section": "media/vinyl/light/section@2x.jpg",
+      "image_text": "media/vinyl/light/image_text@2x.jpg",
+      "points": "media/vinyl/light/points@2x.jpg",
+      "quote": "media/vinyl/light/quote@2x.jpg",
+      "data": "media/vinyl/light/data@2x.jpg",
+      "closing": "media/vinyl/light/closing@2x.jpg"
+     },
      "render_fp": "59eec1538d982ca0fc58bf89e5a7f47377cfb4af8e48b62209c63b44505fda41",
      "python": "k = vl.use(\"vinyl\", prs)",
      "prompt": {
@@ -3149,6 +3464,15 @@
       "quote": "media/vinyl/cream/quote.jpg",
       "data": "media/vinyl/cream/data.jpg",
       "closing": "media/vinyl/cream/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/vinyl/cream/cover@2x.jpg",
+      "section": "media/vinyl/cream/section@2x.jpg",
+      "image_text": "media/vinyl/cream/image_text@2x.jpg",
+      "points": "media/vinyl/cream/points@2x.jpg",
+      "quote": "media/vinyl/cream/quote@2x.jpg",
+      "data": "media/vinyl/cream/data@2x.jpg",
+      "closing": "media/vinyl/cream/closing@2x.jpg"
      },
      "render_fp": "892b13eb130ad5d02fd85ed97c348f370cbc65870557b6ebbe688c61b5e91aaa",
      "python": "k = vl.use(\"vinyl\", prs, ground=\"cream\")",
@@ -3270,6 +3594,15 @@
       "data": "media/receipt/light/data.jpg",
       "closing": "media/receipt/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/receipt/light/cover@2x.jpg",
+      "section": "media/receipt/light/section@2x.jpg",
+      "image_text": "media/receipt/light/image_text@2x.jpg",
+      "points": "media/receipt/light/points@2x.jpg",
+      "quote": "media/receipt/light/quote@2x.jpg",
+      "data": "media/receipt/light/data@2x.jpg",
+      "closing": "media/receipt/light/closing@2x.jpg"
+     },
      "render_fp": "fdc7703e5b4e7b7af72364c7d479acd77232f19919427897802ee7c27d0b68e2",
      "python": "k = vl.use(\"receipt\", prs)",
      "prompt": {
@@ -3312,6 +3645,15 @@
       "quote": "media/receipt/carbon/quote.jpg",
       "data": "media/receipt/carbon/data.jpg",
       "closing": "media/receipt/carbon/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/receipt/carbon/cover@2x.jpg",
+      "section": "media/receipt/carbon/section@2x.jpg",
+      "image_text": "media/receipt/carbon/image_text@2x.jpg",
+      "points": "media/receipt/carbon/points@2x.jpg",
+      "quote": "media/receipt/carbon/quote@2x.jpg",
+      "data": "media/receipt/carbon/data@2x.jpg",
+      "closing": "media/receipt/carbon/closing@2x.jpg"
      },
      "render_fp": "0221ca151b8e421d887bab0398aca8db5e8f0ba5cae472ee6c727b6e49dbb617",
      "python": "k = vl.use(\"receipt\", prs, ground=\"carbon\")",
@@ -3429,6 +3771,15 @@
       "data": "media/comic/light/data.jpg",
       "closing": "media/comic/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/comic/light/cover@2x.jpg",
+      "section": "media/comic/light/section@2x.jpg",
+      "image_text": "media/comic/light/image_text@2x.jpg",
+      "points": "media/comic/light/points@2x.jpg",
+      "quote": "media/comic/light/quote@2x.jpg",
+      "data": "media/comic/light/data@2x.jpg",
+      "closing": "media/comic/light/closing@2x.jpg"
+     },
      "render_fp": "7070eedd5387180d22e7d394a1c251ac484569332b801098b33a0934dcc03c76",
      "python": "k = vl.use(\"comic\", prs)",
      "prompt": {
@@ -3471,6 +3822,15 @@
       "quote": "media/comic/noir/quote.jpg",
       "data": "media/comic/noir/data.jpg",
       "closing": "media/comic/noir/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/comic/noir/cover@2x.jpg",
+      "section": "media/comic/noir/section@2x.jpg",
+      "image_text": "media/comic/noir/image_text@2x.jpg",
+      "points": "media/comic/noir/points@2x.jpg",
+      "quote": "media/comic/noir/quote@2x.jpg",
+      "data": "media/comic/noir/data@2x.jpg",
+      "closing": "media/comic/noir/closing@2x.jpg"
      },
      "render_fp": "d742c144d381c46db57bfb6eec2182b1707e7b6a5b32471f8877f917cc197656",
      "python": "k = vl.use(\"comic\", prs, ground=\"noir\")",
@@ -3587,6 +3947,15 @@
       "data": "media/pixel/light/data.jpg",
       "closing": "media/pixel/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/pixel/light/cover@2x.jpg",
+      "section": "media/pixel/light/section@2x.jpg",
+      "image_text": "media/pixel/light/image_text@2x.jpg",
+      "points": "media/pixel/light/points@2x.jpg",
+      "quote": "media/pixel/light/quote@2x.jpg",
+      "data": "media/pixel/light/data@2x.jpg",
+      "closing": "media/pixel/light/closing@2x.jpg"
+     },
      "render_fp": "d21169fbecba33917101827226a39786d046e54ec5ea9fa9c5a2f7e3ca24115b",
      "python": "k = vl.use(\"pixel\", prs)",
      "prompt": {
@@ -3629,6 +3998,15 @@
       "quote": "media/pixel/arcade/quote.jpg",
       "data": "media/pixel/arcade/data.jpg",
       "closing": "media/pixel/arcade/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/pixel/arcade/cover@2x.jpg",
+      "section": "media/pixel/arcade/section@2x.jpg",
+      "image_text": "media/pixel/arcade/image_text@2x.jpg",
+      "points": "media/pixel/arcade/points@2x.jpg",
+      "quote": "media/pixel/arcade/quote@2x.jpg",
+      "data": "media/pixel/arcade/data@2x.jpg",
+      "closing": "media/pixel/arcade/closing@2x.jpg"
      },
      "render_fp": "f5aaaf424731c03da076b2a2fa2f878b67fc9fb6fe4ee36033c5af9926acefb2",
      "python": "k = vl.use(\"pixel\", prs, ground=\"arcade\")",
@@ -3767,6 +4145,15 @@
       "data": "media/bricks/light/data.jpg",
       "closing": "media/bricks/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/bricks/light/cover@2x.jpg",
+      "section": "media/bricks/light/section@2x.jpg",
+      "image_text": "media/bricks/light/image_text@2x.jpg",
+      "points": "media/bricks/light/points@2x.jpg",
+      "quote": "media/bricks/light/quote@2x.jpg",
+      "data": "media/bricks/light/data@2x.jpg",
+      "closing": "media/bricks/light/closing@2x.jpg"
+     },
      "render_fp": "b8e98dd7c7d795b5a57cce08d9caf89b6999753532bb5cad302e9062b86ccf8f",
      "python": "k = vl.use(\"bricks\", prs)",
      "prompt": {
@@ -3809,6 +4196,15 @@
       "quote": "media/bricks/blue/quote.jpg",
       "data": "media/bricks/blue/data.jpg",
       "closing": "media/bricks/blue/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/bricks/blue/cover@2x.jpg",
+      "section": "media/bricks/blue/section@2x.jpg",
+      "image_text": "media/bricks/blue/image_text@2x.jpg",
+      "points": "media/bricks/blue/points@2x.jpg",
+      "quote": "media/bricks/blue/quote@2x.jpg",
+      "data": "media/bricks/blue/data@2x.jpg",
+      "closing": "media/bricks/blue/closing@2x.jpg"
      },
      "render_fp": "791b43ca4dfd81d42d84057af84b38639e92bd3cd5855b7af05b114c967955a1",
      "python": "k = vl.use(\"bricks\", prs, ground=\"blue\")",
@@ -3923,6 +4319,15 @@
       "data": "media/boardgame/light/data.jpg",
       "closing": "media/boardgame/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/boardgame/light/cover@2x.jpg",
+      "section": "media/boardgame/light/section@2x.jpg",
+      "image_text": "media/boardgame/light/image_text@2x.jpg",
+      "points": "media/boardgame/light/points@2x.jpg",
+      "quote": "media/boardgame/light/quote@2x.jpg",
+      "data": "media/boardgame/light/data@2x.jpg",
+      "closing": "media/boardgame/light/closing@2x.jpg"
+     },
      "render_fp": "b97a2ef33f83d2b563602d56a7e87342c6a1b416fb2c453bca5e13762ee0026b",
      "python": "k = vl.use(\"boardgame\", prs)",
      "prompt": {
@@ -3965,6 +4370,15 @@
       "quote": "media/boardgame/felt/quote.jpg",
       "data": "media/boardgame/felt/data.jpg",
       "closing": "media/boardgame/felt/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/boardgame/felt/cover@2x.jpg",
+      "section": "media/boardgame/felt/section@2x.jpg",
+      "image_text": "media/boardgame/felt/image_text@2x.jpg",
+      "points": "media/boardgame/felt/points@2x.jpg",
+      "quote": "media/boardgame/felt/quote@2x.jpg",
+      "data": "media/boardgame/felt/data@2x.jpg",
+      "closing": "media/boardgame/felt/closing@2x.jpg"
      },
      "render_fp": "d5e88a9cef3402cf9b899728c4b84038930e03a8fd26c25fc67ba04c918261eb",
      "python": "k = vl.use(\"boardgame\", prs, ground=\"felt\")",
@@ -4094,6 +4508,15 @@
       "data": "media/circuit/light/data.jpg",
       "closing": "media/circuit/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/circuit/light/cover@2x.jpg",
+      "section": "media/circuit/light/section@2x.jpg",
+      "image_text": "media/circuit/light/image_text@2x.jpg",
+      "points": "media/circuit/light/points@2x.jpg",
+      "quote": "media/circuit/light/quote@2x.jpg",
+      "data": "media/circuit/light/data@2x.jpg",
+      "closing": "media/circuit/light/closing@2x.jpg"
+     },
      "render_fp": "dee6a8614ad82516a0377bf13fa90b0d4b50e02fd72471cb301b233d555d933b",
      "python": "k = vl.use(\"circuit\", prs)",
      "prompt": {
@@ -4136,6 +4559,15 @@
       "quote": "media/circuit/matte/quote.jpg",
       "data": "media/circuit/matte/data.jpg",
       "closing": "media/circuit/matte/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/circuit/matte/cover@2x.jpg",
+      "section": "media/circuit/matte/section@2x.jpg",
+      "image_text": "media/circuit/matte/image_text@2x.jpg",
+      "points": "media/circuit/matte/points@2x.jpg",
+      "quote": "media/circuit/matte/quote@2x.jpg",
+      "data": "media/circuit/matte/data@2x.jpg",
+      "closing": "media/circuit/matte/closing@2x.jpg"
      },
      "render_fp": "0de85abeee02b8bdb0ec925ede6427e6e3a6ea3c58a36048287091146ef02688",
      "python": "k = vl.use(\"circuit\", prs, ground=\"matte\")",
@@ -4256,6 +4688,15 @@
       "data": "media/topo/light/data.jpg",
       "closing": "media/topo/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/topo/light/cover@2x.jpg",
+      "section": "media/topo/light/section@2x.jpg",
+      "image_text": "media/topo/light/image_text@2x.jpg",
+      "points": "media/topo/light/points@2x.jpg",
+      "quote": "media/topo/light/quote@2x.jpg",
+      "data": "media/topo/light/data@2x.jpg",
+      "closing": "media/topo/light/closing@2x.jpg"
+     },
      "render_fp": "7049fdfc27a23287f4252c545679f1376e0646af5e77454206a52097e57115bd",
      "python": "k = vl.use(\"topo\", prs)",
      "prompt": {
@@ -4299,6 +4740,15 @@
       "quote": "media/topo/night/quote.jpg",
       "data": "media/topo/night/data.jpg",
       "closing": "media/topo/night/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/topo/night/cover@2x.jpg",
+      "section": "media/topo/night/section@2x.jpg",
+      "image_text": "media/topo/night/image_text@2x.jpg",
+      "points": "media/topo/night/points@2x.jpg",
+      "quote": "media/topo/night/quote@2x.jpg",
+      "data": "media/topo/night/data@2x.jpg",
+      "closing": "media/topo/night/closing@2x.jpg"
      },
      "render_fp": "91f3d38fc5dac40c56d5ac30885e3b296b95c8ada74a24a4ec1da3e54bc0c520",
      "python": "k = vl.use(\"topo\", prs, ground=\"night\")",
@@ -4428,6 +4878,15 @@
       "data": "media/scoreboard/light/data.jpg",
       "closing": "media/scoreboard/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/scoreboard/light/cover@2x.jpg",
+      "section": "media/scoreboard/light/section@2x.jpg",
+      "image_text": "media/scoreboard/light/image_text@2x.jpg",
+      "points": "media/scoreboard/light/points@2x.jpg",
+      "quote": "media/scoreboard/light/quote@2x.jpg",
+      "data": "media/scoreboard/light/data@2x.jpg",
+      "closing": "media/scoreboard/light/closing@2x.jpg"
+     },
      "render_fp": "60bbff7ca949b1d1b4c379f3bdfed30ecdfb6db3cde92e2bd62c2af3138029fe",
      "python": "k = vl.use(\"scoreboard\", prs)",
      "prompt": {
@@ -4470,6 +4929,15 @@
       "quote": "media/scoreboard/turf/quote.jpg",
       "data": "media/scoreboard/turf/data.jpg",
       "closing": "media/scoreboard/turf/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/scoreboard/turf/cover@2x.jpg",
+      "section": "media/scoreboard/turf/section@2x.jpg",
+      "image_text": "media/scoreboard/turf/image_text@2x.jpg",
+      "points": "media/scoreboard/turf/points@2x.jpg",
+      "quote": "media/scoreboard/turf/quote@2x.jpg",
+      "data": "media/scoreboard/turf/data@2x.jpg",
+      "closing": "media/scoreboard/turf/closing@2x.jpg"
      },
      "render_fp": "e47d839528c970c3d49299a2b6f6e67a63fc59fc70d339886ceffe84bf382074",
      "python": "k = vl.use(\"scoreboard\", prs, ground=\"turf\")",
@@ -4587,6 +5055,15 @@
       "data": "media/periodic/light/data.jpg",
       "closing": "media/periodic/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/periodic/light/cover@2x.jpg",
+      "section": "media/periodic/light/section@2x.jpg",
+      "image_text": "media/periodic/light/image_text@2x.jpg",
+      "points": "media/periodic/light/points@2x.jpg",
+      "quote": "media/periodic/light/quote@2x.jpg",
+      "data": "media/periodic/light/data@2x.jpg",
+      "closing": "media/periodic/light/closing@2x.jpg"
+     },
      "render_fp": "a464b0a0bbcfd32efc130e0265bc2bd76b1ae22fd74f6ae411a72b50403cc7da",
      "python": "k = vl.use(\"periodic\", prs)",
      "prompt": {
@@ -4629,6 +5106,15 @@
       "quote": "media/periodic/dark/quote.jpg",
       "data": "media/periodic/dark/data.jpg",
       "closing": "media/periodic/dark/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/periodic/dark/cover@2x.jpg",
+      "section": "media/periodic/dark/section@2x.jpg",
+      "image_text": "media/periodic/dark/image_text@2x.jpg",
+      "points": "media/periodic/dark/points@2x.jpg",
+      "quote": "media/periodic/dark/quote@2x.jpg",
+      "data": "media/periodic/dark/data@2x.jpg",
+      "closing": "media/periodic/dark/closing@2x.jpg"
      },
      "render_fp": "38b237871e7810b4fec30cf60874a9d1751cb6c579ffbea35eee372e5106a90d",
      "python": "k = vl.use(\"periodic\", prs, ground=\"dark\")",
@@ -4754,6 +5240,15 @@
       "data": "media/recipe/light/data.jpg",
       "closing": "media/recipe/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/recipe/light/cover@2x.jpg",
+      "section": "media/recipe/light/section@2x.jpg",
+      "image_text": "media/recipe/light/image_text@2x.jpg",
+      "points": "media/recipe/light/points@2x.jpg",
+      "quote": "media/recipe/light/quote@2x.jpg",
+      "data": "media/recipe/light/data@2x.jpg",
+      "closing": "media/recipe/light/closing@2x.jpg"
+     },
      "render_fp": "bc43103b12ceb93c743eefe0007a4633867e405edcf6577f03b27719c6680c72",
      "python": "k = vl.use(\"recipe\", prs)",
      "prompt": {
@@ -4796,6 +5291,15 @@
       "quote": "media/recipe/kraft/quote.jpg",
       "data": "media/recipe/kraft/data.jpg",
       "closing": "media/recipe/kraft/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/recipe/kraft/cover@2x.jpg",
+      "section": "media/recipe/kraft/section@2x.jpg",
+      "image_text": "media/recipe/kraft/image_text@2x.jpg",
+      "points": "media/recipe/kraft/points@2x.jpg",
+      "quote": "media/recipe/kraft/quote@2x.jpg",
+      "data": "media/recipe/kraft/data@2x.jpg",
+      "closing": "media/recipe/kraft/closing@2x.jpg"
      },
      "render_fp": "0ab211eee1d5fbc4d3c4896a17e659879a3bcdeb70dc7d1920d539366f68a633",
      "python": "k = vl.use(\"recipe\", prs, ground=\"kraft\")",
@@ -4923,6 +5427,15 @@
       "data": "media/stainedglass/light/data.jpg",
       "closing": "media/stainedglass/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/stainedglass/light/cover@2x.jpg",
+      "section": "media/stainedglass/light/section@2x.jpg",
+      "image_text": "media/stainedglass/light/image_text@2x.jpg",
+      "points": "media/stainedglass/light/points@2x.jpg",
+      "quote": "media/stainedglass/light/quote@2x.jpg",
+      "data": "media/stainedglass/light/data@2x.jpg",
+      "closing": "media/stainedglass/light/closing@2x.jpg"
+     },
      "render_fp": "da8043d2fce6e5a6f43e0d34f89f043b9935aa12275b046490732438d99432b6",
      "python": "k = vl.use(\"stainedglass\", prs)",
      "prompt": {
@@ -4965,6 +5478,15 @@
       "quote": "media/stainedglass/nave/quote.jpg",
       "data": "media/stainedglass/nave/data.jpg",
       "closing": "media/stainedglass/nave/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/stainedglass/nave/cover@2x.jpg",
+      "section": "media/stainedglass/nave/section@2x.jpg",
+      "image_text": "media/stainedglass/nave/image_text@2x.jpg",
+      "points": "media/stainedglass/nave/points@2x.jpg",
+      "quote": "media/stainedglass/nave/quote@2x.jpg",
+      "data": "media/stainedglass/nave/data@2x.jpg",
+      "closing": "media/stainedglass/nave/closing@2x.jpg"
      },
      "render_fp": "9503d5b76c7bb23937daeaa073f998e8ef97626261af3a7175654b505bc515fa",
      "python": "k = vl.use(\"stainedglass\", prs, ground=\"nave\")",
@@ -5086,6 +5608,15 @@
       "data": "media/calendar/light/data.jpg",
       "closing": "media/calendar/light/closing.jpg"
      },
+     "pages_hd": {
+      "cover": "media/calendar/light/cover@2x.jpg",
+      "section": "media/calendar/light/section@2x.jpg",
+      "image_text": "media/calendar/light/image_text@2x.jpg",
+      "points": "media/calendar/light/points@2x.jpg",
+      "quote": "media/calendar/light/quote@2x.jpg",
+      "data": "media/calendar/light/data@2x.jpg",
+      "closing": "media/calendar/light/closing@2x.jpg"
+     },
      "render_fp": "b77f1c42b2c2e0104bb0da96c387629d85cef6c1a621afe4260257fc62916105",
      "python": "k = vl.use(\"calendar\", prs)",
      "prompt": {
@@ -5128,6 +5659,15 @@
       "quote": "media/calendar/night/quote.jpg",
       "data": "media/calendar/night/data.jpg",
       "closing": "media/calendar/night/closing.jpg"
+     },
+     "pages_hd": {
+      "cover": "media/calendar/night/cover@2x.jpg",
+      "section": "media/calendar/night/section@2x.jpg",
+      "image_text": "media/calendar/night/image_text@2x.jpg",
+      "points": "media/calendar/night/points@2x.jpg",
+      "quote": "media/calendar/night/quote@2x.jpg",
+      "data": "media/calendar/night/data@2x.jpg",
+      "closing": "media/calendar/night/closing@2x.jpg"
      },
      "render_fp": "fd958185cb9dca24a55476182576a47f916eadd8b268b5e65128440719c0b53f",
      "python": "k = vl.use(\"calendar\", prs, ground=\"night\")",
