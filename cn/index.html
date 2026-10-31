@@ -64,6 +64,7 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline:2px solid v
 .hero { padding:28px 0 0; }
 .brand { display:flex; align-items:center; gap:12px; padding-bottom:26px; border-bottom:1px solid var(--line); }
 .brand img { width:32px; height:32px; border-radius:6px; }
+.brand-title { display:flex; align-items:baseline; gap:12px; min-width:0; }
 .brand .name { font-size:18px; font-weight:500; letter-spacing:-.025em; }
 .brand .by { color:var(--mute); font-size:12px; }
 .brand .by a { color:inherit; text-decoration:none; }
@@ -104,15 +105,17 @@ footer .sp { flex:1; }
 }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; } }
 </style>
-<link rel="stylesheet" href="/languages/library.css?v=20261030b">
+<link rel="stylesheet" href="/languages/library.css?v=20261031">
 </head>
 <body>
 <header class="hero">
   <div class="wrap">
     <nav class="brand" aria-label="Main">
       <img src="/logo-160.png" alt="Addsum">
-      <span class="name">slide-maker</span>
-      <span class="by" id="byline"></span>
+      <div class="brand-title">
+        <span class="name">slide-maker</span>
+        <span class="by" id="byline"></span>
+      </div>
       <button class="langpill" id="langBtn" type="button" aria-label="Switch language"></button>
       <a class="btn primary vlib" id="vlBtn" href="#languages"><span class="full">Template library</span><span class="short">Templates</span></a>
       <a class="btn ghost" href="https://github.com/addsumtech/slides_maker">GitHub</a>
