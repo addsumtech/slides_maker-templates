@@ -343,6 +343,17 @@ function setLang(lang) {
   else lang=/^zh/i.test((navigator.languages&&navigator.languages[0])||navigator.language||'') ? 'zh' : 'en';
   setLang(lang);
 })();
+(function(){   // the template library renders above #examples after load and pushes it down: follow it until it settles
+  if (location.hash !== '#examples') return;
+  var ex = document.getElementById('examples'), done = false, t;
+  function land(){ if (!done) ex.scrollIntoView({ behavior:'instant', block:'start' }); }
+  function stop(){ done = true; if (ro) ro.disconnect(); }
+  var ro = window.ResizeObserver ? new ResizeObserver(function(){ clearTimeout(t); t = setTimeout(land, 60); }) : null;
+  if (ro) ro.observe(document.body);
+  addEventListener('load', land);
+  ['wheel','touchstart','keydown','mousedown'].forEach(function(e){ addEventListener(e, stop, { once:true, passive:true }); });
+  setTimeout(stop, 6000);
+})();
 </script>
 <script src="/languages/library.js?v=20261031d"></script>
 </body>

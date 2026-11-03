@@ -74,7 +74,7 @@ main { flex:1; display:flex; align-items:center; justify-content:center; padding
 <body>
 <header>
   <img class="logo" src="logo-160.png" alt="">
-  <a class="back" href="index.html">&larr; Gallery</a>
+  <a class="back" href="/#examples">&larr; Example decks</a>
   <div class="title" id="deckTitle">slide-maker deck</div>
   <div class="spacer"></div>
   <a class="dl" id="dlBtn" href="#" download>Download .pptx</a>
@@ -126,7 +126,7 @@ function goto(n) { page = n; show(); }
 
 if (!deck) {
   document.querySelector('main').innerHTML =
-    '<div class="err">Unknown deck. <a href="index.html">Back to the gallery</a></div>';
+    '<div class="err">Unknown deck. <a href="/#examples">Back to the example decks</a></div>';
   document.querySelector('.deckbar').style.display = 'none';
   document.querySelector('.usebar').style.display = 'none';
 } else {
@@ -135,8 +135,8 @@ if (!deck) {
   document.getElementById('deckTitle').textContent = `${deck.title}（${zh ? '中文' : 'English'}）`;
   document.title = `${deck.title} — slide-maker`;
   document.documentElement.lang = zh ? 'zh-CN' : 'en';
-  document.querySelector('a.back').textContent = zh ? '← 返回画廊' : '← Gallery';
-  document.querySelector('a.back').href = zh ? 'index.html#zh' : 'index.html#en';
+  document.querySelector('a.back').textContent = zh ? '← 返回完整示例' : '← Example decks';
+  document.querySelector('a.back').href = zh ? '/cn/#examples' : '/#examples';
   document.getElementById('hint').textContent = zh
     ? '方向键翻页，点画面左右半边，或左右滑动。'
     : 'Use arrow keys, click the left / right half of the slide, or swipe.';
