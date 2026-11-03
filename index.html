@@ -98,13 +98,33 @@ footer .sp { flex:1; }
   .brand img { width:27px; height:27px; } .brand .name { font-size:16px; }
   .brand .by { display:none; } .brand .btn { font-size:12px; padding:7px 9px; }
   .brand .langpill { font-size:12px; padding:6px; }
-  .brand .vlib .full { display:none; } .brand .vlib .short { display:inline; }
+  .brand .exlink { display:none; } .brand .vlib .full { display:none; } .brand .vlib .short { display:inline; }
   .hero-copy { padding:30px 0 26px; } .lede { font-size:14px; line-height:1.8; }
   .vidcard { padding:16px; } .vidhead p { font-size:13px; }
   footer .inner { gap:12px; font-size:12px; } footer .sp { flex-basis:100%; }
 }
+.ex { padding-top:56px; scroll-margin-top:0; }
+.ex-head h2 { font-size:clamp(25px, 3vw, 32px); line-height:1.3; margin:0 0 12px; font-weight:650; letter-spacing:-0.015em; }
+.ex-head p { color:var(--mute); font-size:15px; line-height:1.8; max-width:820px; margin:0 0 24px; }
+.ex-grid { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:20px; }
+@media (max-width:1040px) { .ex-grid { grid-template-columns:repeat(2, minmax(0, 1fr)); } }
+@media (max-width:640px) { .ex-grid { grid-template-columns:minmax(0, 1fr); gap:18px; } }
+.ex-card { background:var(--card); border:1px solid var(--line); border-radius:9px; overflow:hidden; display:flex; flex-direction:column; min-width:0; transition:border-color .15s; }
+.ex-card:hover, .ex-card:focus-within { border-color:#a3aab3; }
+.ex-cover { display:block; line-height:0; background:#e7e9ed; }
+.ex-cover img { width:100%; aspect-ratio:16/9; object-fit:cover; display:block; }
+.ex-card.portrait .ex-cover img { object-fit:contain; }
+.ex-meta { padding:13px 16px 16px; display:flex; flex-direction:column; gap:5px; flex:1; }
+.ex-name { font-weight:650; font-size:15px; letter-spacing:-.01em; }
+.ex-use { color:var(--mute); font-size:12.5px; line-height:1.6; flex:1; }
+.ex-links { display:flex; gap:8px; margin-top:10px; }
+.ex-links a { text-align:center; text-decoration:none; font-weight:650; font-size:12.5px; padding:7px 12px; white-space:nowrap; border-radius:7px; border:1px solid var(--line); color:var(--ink); }
+.ex-links a.flip { background:var(--ink); border-color:var(--ink); color:#fff; }
+.ex-links a:hover { border-color:var(--accent); }
+.ex-links a.flip:hover { background:var(--accent); border-color:var(--accent); }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; } }
 </style>
+<script src="/decks.js?v=20261017c"></script>
 <link rel="stylesheet" href="/languages/library.css?v=20261031b">
 </head>
 <body>
@@ -118,6 +138,7 @@ footer .sp { flex:1; }
       </div>
       <button class="langpill" id="langBtn" type="button" aria-label="Switch language"></button>
       <a class="btn primary vlib" id="vlBtn" href="#languages"><span class="full">Template library</span><span class="short">Templates</span></a>
+      <a class="btn ghost exlink" id="exBtn" href="#examples">Examples</a>
       <a class="btn ghost" href="https://github.com/addsumtech/slides_maker">GitHub</a>
     </nav>
     <div class="hero-copy">
@@ -180,6 +201,16 @@ footer .sp { flex:1; }
   <div id="vlLive" class="sr" aria-live="polite"></div>
 </section>
 
+<section class="wrap ex" id="examples" aria-labelledby="exTitle">
+  <div class="ex-head">
+    <h2 id="exTitle"></h2>
+    <p id="exLede"></p>
+  </div>
+  <div class="ex-grid" id="exGrid"></div>
+  <noscript><p class="ex-head">The example decks are listed with JavaScript. The same decks are in the
+    <a href="https://github.com/addsumtech/slides_maker#example-decks">README</a>.</p></noscript>
+</section>
+
 </main>
 
 <footer>
@@ -197,26 +228,58 @@ const STR = {
   en: {
     byline:'by <a href="https://addsum.top/?lang=en">Addsum</a>',
     headline:'Your material. An editable presentation.',
-    lede:'Use slide-maker to turn papers, code and documents into a PowerPoint you can keep editing. Start with the video, then choose a template for your own material.',
+    lede:'Use slide-maker to turn papers, code and documents into a PowerPoint you can keep editing. Start with the video, choose a template for the look, and open an example deck to see a finished result.',
     vlBtn:'Template library', vlShort:'Templates',
     vTitle:'See how it works',
     vLede:'A three-minute walkthrough: provide your material, confirm the plan, build the slides and review the result. English narration with captions.',
     startLink:'Installation and usage',
+    exBtn:'Examples',
+    exTitle:'Example decks',
+    exLede:'Twelve finished decks, each built from real material for a common use. The template library sets the look; these show what a complete deck contains: KPI grids, native charts, tables, timelines, diagrams, equations, backup slides and a sources page. Flip through one online, or download its .pptx and click into any object. To reuse a deck’s design, give its .pptx to slide-maker as a reference deck.',
+    exFlip:'Flip online', exDownload:'Download .pptx', exPages:'{n} slides',
     footText:'Produced by Addsum',
     title:'slide-maker | Editable PPT & Template Library'
   },
   zh: {
     byline:'<a href="https://addsum.top/cn/">增和科技 Addsum</a> 出品',
     headline:'从你的材料，到可编辑的 PPT。',
-    lede:'使用 slide-maker，读取论文、代码或文档，整理内容、设计页面，生成可继续修改的 PowerPoint。先看视频了解流程，再选一套适合你的模板。',
+    lede:'使用 slide-maker，读取论文、代码或文档，整理内容、设计页面，生成可继续修改的 PowerPoint。先看视频了解流程，再从模板库选画风，从完整示例看成品。',
     vlBtn:'模板库', vlShort:'模板库',
     vTitle:'3 分钟，看懂制作流程',
     vLede:'从提供材料、确认方案，到生成页面、预览评审，看看一份 PPT 是怎么做出来的。',
     startLink:'安装与使用说明',
+    exBtn:'完整示例',
+    exTitle:'完整示例',
+    exLede:'十二份完整成品，每份用真实材料做一个常见场景。模板库决定画风；这里展示一份完整 deck 里有什么：指标网格、原生图表、表格、时间线、示意图、公式、备用页和来源页。可以在线翻页，也可以下载 .pptx 点开任意对象。想沿用某一份的设计，把它的 .pptx 作为参考 deck 交给 slide-maker。',
+    exFlip:'在线翻页', exDownload:'下载 .pptx', exPages:'{n} 页',
     footText:'增和科技 Addsum 出品',
     title:'slide-maker | 可编辑 PPT 与模板库'
   }
 };
+function renderExamples(lang) {
+  const t = STR[lang], grid = document.getElementById('exGrid');
+  if (!grid) return;
+  grid.textContent = '';
+  for (const d of (window.DECKS || []).filter(x => x.lang === lang)) {
+    const slug = d.id.split('/')[1];
+    const card = document.createElement('article');
+    card.className = 'ex-card' + (d.aspect === '3:4' ? ' portrait' : '');
+    const flip = '/viewer.html?deck=' + encodeURIComponent(d.id).replace('%2F', '/');
+    const cover = document.createElement('a'); cover.className = 'ex-cover'; cover.href = flip;
+    const img = document.createElement('img'); img.loading = 'lazy'; img.alt = d.title;
+    img.src = '/docs/assets/screenshots/preview_' + (lang === 'en' ? 'en_' : '') + slug + '.png';
+    cover.appendChild(img);
+    const meta = document.createElement('div'); meta.className = 'ex-meta';
+    const name = document.createElement('div'); name.className = 'ex-name'; name.textContent = d.title;
+    const use = document.createElement('div'); use.className = 'ex-use';
+    use.textContent = d.use.split(/,\s*/).slice(0, 4).join(lang === 'zh' ? '、' : ', ') + ' · ' + t.exPages.replace('{n}', d.pages);
+    const links = document.createElement('div'); links.className = 'ex-links';
+    const a1 = document.createElement('a'); a1.className = 'flip'; a1.href = flip; a1.textContent = t.exFlip;
+    const a2 = document.createElement('a'); a2.href = '/templates/decks/' + d.id + '/template.pptx'; a2.textContent = t.exDownload;
+    a2.setAttribute('download', '');
+    links.append(a1, a2); meta.append(name, use, links); card.append(cover, meta); grid.appendChild(card);
+  }
+}
 function setLang(lang) {
   const t = STR[lang];
   if (history.replaceState) {   // the page's own language markers go; a library search or #vl-<language> stays
@@ -228,7 +291,7 @@ function setLang(lang) {
   if (fh) fh.href = lang === 'zh' ? 'https://addsum.top/cn/' : 'https://addsum.top/?lang=en';
   const lb = document.getElementById('langBtn');
   if (lb) { lb.textContent = lang === 'zh' ? 'EN' : '中文'; lb.setAttribute('aria-label', lang === 'zh' ? 'Switch to English' : '切换为中文'); lb.onclick = () => { try { localStorage.setItem('addsum-lang', lang === 'zh' ? 'en' : 'zh'); } catch(e){} setLang(lang === 'zh' ? 'en' : 'zh'); }; }
-  for (const k of ['byline','headline','lede','vTitle','vLede','startLink','footText']) {
+  for (const k of ['byline','headline','lede','vTitle','vLede','startLink','exTitle','exLede','exBtn','footText']) {
     const el = document.getElementById(k);
     if (el) el.innerHTML = t[k];
   }
@@ -245,6 +308,7 @@ function setLang(lang) {
   document.getElementById('startLink').href = lang === 'zh' ? 'https://github.com/addsumtech/slides_maker/blob/main/README_CN.md#快速开始' : 'https://github.com/addsumtech/slides_maker#quick-start';
   const vb = document.getElementById('vlBtn');
   if (vb) { vb.querySelector('.full').textContent = t.vlBtn; vb.querySelector('.short').textContent = t.vlShort; }
+  renderExamples(lang);
   document.title = t.title;
   document.documentElement.lang = (lang === 'zh') ? 'zh-CN' : 'en';
   if (window.slideMakerLibrary) window.slideMakerLibrary.setLang(lang);   // keep the library in the same language
